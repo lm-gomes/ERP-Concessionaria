@@ -2,9 +2,11 @@ package view;
 import modelos.Veiculo;
 import modelos.Carro;
 import modelos.Moto;
+import modelos.Cliente;
 import java.util.Scanner;
 
 import controller.ControleEstoque;
+import controller.ControleClientes;
 
 public class Screen {
     public static void menuPrincipal(){
@@ -101,6 +103,25 @@ public class Screen {
             System.out.println("Digite o indice: ");
             int userIndex = scanner.nextInt();
             
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    public static void menuCadastrarCliente(){
+        try(Scanner scan = new Scanner(System.in)){
+            System.out.println("NOME: ");
+            String userNome = scan.nextLine();
+            System.out.println("ENDERECO: ");
+            String userEndereco = scan.nextLine();
+            System.out.println("CONTATO: ");
+            int userContato = scan.nextInt();
+            System.out.println("SENHA: ");
+            int userSenha = scan.nextInt();
+
+            Cliente cliente = new Cliente(userNome, userEndereco, userContato, userSenha);
+            ControleClientes.cadastrarClientes(cliente);
         }
         catch(Exception e){
             e.printStackTrace();
