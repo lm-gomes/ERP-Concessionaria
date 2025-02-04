@@ -42,31 +42,24 @@ public class ControleEstoque{
     public static void verificarEstoque(String nomeArquivo){
         try(BufferedReader br = new BufferedReader(new FileReader(nomeArquivo))){
 
-            //nao fui eu q fiz isso
+            String s = br.readLine();  // Lê a primeira linha
+
+            while (br.ready()) {
+                int cont = 1;  // Inicia o contador com 1 (pois já lemos uma ocorrência)
             
-
-
-            /*for(int i = 0; br.ready(); i++){
-                String s = br.readLine();
-                int cont = 0;
-                for(j = i; br.ready() && br.readLine().equals(s); j++){
+                // Enquanto houver mais linhas e a próxima linha for igual à atual
+                String proxLinha = "";
+                while (br.ready() && (proxLinha = br.readLine()).equals(s)) {
                     cont++;
                 }
-                    if(cont < 5){
-                        System.out.println("Alerta!" + s);
-                    }
-                    i = j;
-            }*/
-            while(br.ready()){
-                String s = br.readLine();
-                int cont = 1;
-                while(br.ready() && br.readLine().equals(s)){
-                    cont++;
+            
+                // Se a string apareceu menos de 5 vezes, exibe alerta
+                if (cont < 5) {
+                    System.out.println("Alerta! " + s);
                 }
-                br.reset();
-                if(cont<5){
-                    System.out.println("Alerta!" + s);
-                }
+            
+                // Aqui, proxLinha é uma nova string, então precisamos processá-la na próxima iteração
+                s = proxLinha;
             }
             
         }
