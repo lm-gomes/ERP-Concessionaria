@@ -2,7 +2,6 @@ package view;
 import modelos.Veiculo;
 import modelos.Carro;
 import modelos.Moto;
-import modelos.Cliente;
 import java.util.Scanner;
 
 import controller.ControleEstoque;
@@ -10,7 +9,7 @@ import controller.ControleEstoque;
 public class Screen {
     public static void menuPrincipal(){
         try(Scanner scanner = new Scanner(System.in)){
-            System.out.print("[1]Cadastrar veiculo\n[2]Consultar veiculos\n[3]Remover veiculo\n[4]Cadastrar Cliente\n[5]Vender Veiculo\n>>");
+            System.out.print("[1]Cadastrar veiculo\n[2]Consultar veiculos\n[3]Remover veiculo\n>>");
             int userInput = scanner.nextInt();
             switch(userInput){
                 case 1:{
@@ -24,19 +23,13 @@ public class Screen {
                 }
 
                 case 3:{
+
                     break;
-                    
-                }
-                case 4:{
-                    menuCadastrarCliente();
-                }
-                case 5:{
-                    menuVendas();
                 }
             }
         }
         catch(Exception e){
-            System.out.print(e.getMessage());
+            System.out.print("Oi");
         }
         
         

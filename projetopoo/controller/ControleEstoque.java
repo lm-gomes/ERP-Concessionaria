@@ -42,21 +42,31 @@ public class ControleEstoque{
     public static void verificarEstoque(String nomeArquivo){
         try(BufferedReader br = new BufferedReader(new FileReader(nomeArquivo))){
 
-            String s = br.readLine();
-
-            while (br.ready()) {
-                int cont = 1; 
+            //nao fui eu q fiz isso
             
-                String proxLinha = "";
-                while (br.ready() && (proxLinha = br.readLine()).equals(s)) {
+
+
+            /*for(int i = 0; br.ready(); i++){
+                String s = br.readLine();
+                int cont = 0;
+                for(j = i; br.ready() && br.readLine().equals(s); j++){
                     cont++;
                 }
-
-                if (cont < 5) {
-                    System.out.println(s + " em falta! (" + cont + " unidades)");
+                    if(cont < 5){
+                        System.out.println("Alerta!" + s);
+                    }
+                    i = j;
+            }*/
+            while(br.ready()){
+                String s = br.readLine();
+                int cont = 1;
+                while(br.ready() && br.readLine().equals(s)){
+                    cont++;
                 }
-            
-                s = proxLinha;
+                br.reset();
+                if(cont<5){
+                    System.out.println("Alerta!" + s);
+                }
             }
             
         }
@@ -105,7 +115,6 @@ public class ControleEstoque{
 
         try(BufferedReader br = new BufferedReader(new FileReader(nomeArquivo));){
             int i = 1;
-            System.out.println("---------------------------------------------");
             while(br.ready()){
                 System.out.println("(" + i + ")" + br.readLine());
                 i++;

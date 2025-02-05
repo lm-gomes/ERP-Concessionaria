@@ -52,13 +52,3 @@ Marca: cu8 Modelo: cuuuu Ano: 1  Preco: 1.0 Cor:red KM: 0.0
 Marca: cu8 Modelo: cuuuu Ano: 1  Preco: 1.0 Cor:red KM: 0.0
 Marca: oi Modelo: camila Ano: 1  Preco: 1.0 Cor:red KM: 0.0
 Marca: oi Modelo: camila Ano: 1  Preco: 1.0 Cor:red KM: 0.0
-Marca: jadiel Modelo: rapidao Ano: 1  Preco: 1.0 Cor:red KM: 0.0
-Marca: jadiel Modelo: rapidao Ano: 1  Preco: 1.0 Cor:red KM: 0.0
-Marca: cu Modelo: kkkk Ano: 1  Preco: 1.0 Cor:red KM: 0.0
-Marca: cu Modelo: kkkk Ano: 1  Preco: 1.0 Cor:red KM: 0.0
-Marca: jadiel Modelo: rapidao Ano: 1  Preco: 1.0 Cor:red KM: 0.0
-Marca: jadiel Modelo: rapidao Ano: 1  Preco: 1.0 Cor:red KM: 0.0
-Marca: jadiel Modelo: xuxu Ano: 1  Preco: 1.0 Cor:red KM: 0.0
-Marca: jadiel Modelo: xuxu Ano: 1  Preco: 1.0 Cor:red KM: 0.0
-Marca: dfg Modelo: dfg Ano: 1  Preco: 1.0 Cor:red KM: 0.0
-Marca: dfg Modelo: dfg Ano: 1  Preco: 1.0 Cor:red KM: 0.0
