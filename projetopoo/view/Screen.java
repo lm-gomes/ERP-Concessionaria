@@ -7,11 +7,12 @@ import java.util.Scanner;
 
 import controller.ControleEstoque;
 import controller.ControleClientes;
+import controller.ControleVendas;
 
 public class Screen {
     public static void menuPrincipal(){
         try(Scanner scanner = new Scanner(System.in)){
-            System.out.print("[1]Cadastrar veiculo\n[2]Consultar veiculos\n[3]Remover veiculo\n>>");
+            System.out.print("[1]Cadastrar veiculo\n[2]Consultar veiculos\n[3]Remover veiculo\n[4]Cadastrar Cliente\n[5]Vender Veiculo\n>>");
             int userInput = scanner.nextInt();
             switch(userInput){
                 case 1:{
@@ -25,13 +26,19 @@ public class Screen {
                 }
 
                 case 3:{
-
                     break;
+                    
+                }
+                case 4:{
+                    menuCadastrarCliente();
+                }
+                case 5:{
+                    menuVendas();
                 }
             }
         }
         catch(Exception e){
-            System.out.print("Oi");
+            System.out.print(e.getMessage());
         }
         
         
@@ -117,14 +124,32 @@ public class Screen {
             String userEndereco = scan.nextLine();
             System.out.println("CONTATO: ");
             int userContato = scan.nextInt();
-            System.out.println("SENHA: ");
-            int userSenha = scan.nextInt();
 
-            Cliente cliente = new Cliente(userNome, userEndereco, userContato, userSenha);
+            Cliente cliente = new Cliente(userNome, userEndereco, userContato);
             ControleClientes.cadastrarClientes(cliente);
         }
         catch(Exception e){
             e.printStackTrace();
         }
+    }
+
+    public static void menuVendas(){
+        try(Scanner scan = new Scanner(System.in)){
+            System.out.print("[1]Carro\n[2]Moto\n>>");
+            int userInput = scan.nextInt();
+            if(userInput == 1){
+                ControleVendas.exibirVeiculo("data/carros.txt");
+            }
+            else{
+                ControleVendas.exibirVeiculo("data/motos.txt");
+            }
+
+            System.out.println("Digite o modelo\n>>");
+            String modelo = scan.nextLine();
+        }
+        catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+
     }
 }
