@@ -1,28 +1,34 @@
 package modelos;
 
 public class Cliente {
-    public String nome;  
+    private String nome;  
     protected String endereco;
     protected int contato;
-    private int senha;
 
-    public Cliente(String nome, String endereco, int contato, int senha){
+    public Cliente(String nome, String endereco, int contato){
         this.nome = nome;
         this.endereco = endereco;
         this.contato = contato;
-        this.senha = senha;
     }
 
-    public void setSenha(int senha){
-        this.senha = senha;
+    public void setNome(String nome){
+        this.nome = nome;
     }
-    public int getSenha(){
-        return senha;
+    public String getNome(){
+        return nome;
     }
 
-    public void alterarInformacoes(String endereco, int contato){
-        System.out.println("Nao e possivel alterar nome e senha!");
+    public void setEndereco(String endereco){
         this.endereco = endereco;
+    }
+    public String getEndereco(){
+        return endereco;
+    }
+
+    public void setContato(int contato){
         this.contato = contato;
+    }
+    public int getContato(){
+        return contato;
     }
 }
