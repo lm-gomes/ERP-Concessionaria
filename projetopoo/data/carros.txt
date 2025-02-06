@@ -1,8 +1,6 @@
 Marca: Oi Modelo: Ola Ano: 123 Preco: 123333.0 Cor:opa KM: 0.0 Qtd: 1
 Marca: kaloi Modelo: pooe Ano: 1999  Preco: 2000.0 Cor:vblue KM: 0.0
 Marca: kaloi Modelo: pooe Ano: 1999  Preco: 2000.0 Cor:vblue KM: 0.0
-Marca: kaloi Modelo: pooe Ano: 1999  Preco: 2000.0 Cor:vblue KM: 0.0
-Marca: jose Modelo: astolfo Ano: 1222  Preco: 999.0 Cor:jojo KM: 4.0
 Marca: jose Modelo: astolfo Ano: 1222  Preco: 999.0 Cor:jojo KM: 4.0
 Marca: jose Modelo: astolfo Ano: 1222  Preco: 999.0 Cor:jojo KM: 4.0
 Marca: jose Modelo: astolfo Ano: 1222  Preco: 999.0 Cor:jojo KM: 4.0
@@ -22,10 +20,8 @@ Marca: ksks Modelo: lontra Ano: 1544  Preco: 122.0 Cor:1 KM: 1.0
 Marca: ksks Modelo: lontra Ano: 1544  Preco: 122.0 Cor:1 KM: 1.0
 Marca: ksks Modelo: lontra Ano: 1544  Preco: 122.0 Cor:1 KM: 1.0
 Marca: cururu Modelo: assado Ano: 19999  Preco: 1.0 Cor:blue KM: 1.0
-Marca: cururu Modelo: assado Ano: 19999  Preco: 1.0 Cor:blue KM: 1.0
 Marca: joao Modelo: barros Ano: 1  Preco: 1.0 Cor:red KM: 0.0
 Marca: joao Modelo: barros Ano: 1  Preco: 1.0 Cor:red KM: 0.0
-Marca: clovis Modelo: arnaldo Ano: 1  Preco: 1.0 Cor:red KM: 0.0
 Marca: clovis Modelo: arnaldo Ano: 1  Preco: 1.0 Cor:red KM: 0.0
 Marca: oi Modelo: lilian Ano: 1  Preco: 1.0 Cor:red KM: 0.0
 Marca: oi Modelo: lilian Ano: 1  Preco: 1.0 Cor:red KM: 0.0
@@ -52,3 +48,5 @@ Marca: cu8 Modelo: cuuuu Ano: 1  Preco: 1.0 Cor:red KM: 0.0
 Marca: cu8 Modelo: cuuuu Ano: 1  Preco: 1.0 Cor:red KM: 0.0
 Marca: oi Modelo: camila Ano: 1  Preco: 1.0 Cor:red KM: 0.0
 Marca: oi Modelo: camila Ano: 1  Preco: 1.0 Cor:red KM: 0.0
+Marca: Fiat Modelo: Palio Ano: 1  Preco: 1.0 Cor:red KM: 0.0
+Marca: Fiat Modelo: Palio Ano: 1  Preco: 1.0 Cor:red KM: 0.0
