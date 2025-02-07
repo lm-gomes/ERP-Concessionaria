@@ -5,6 +5,11 @@ NOME: Jadiel ENDERECO:  Rua nao sei CONTATO: 54668748
 NOME: Jadiel ENDERECO:  Rua RAimundo da barbearia CONTATO: 5464546
 NOME: JAdiel ENDERECO:  gdgdfgdfg CONTATO: 74546
 NOME: Jadiel ENDERECO:  Rua do Raimundo barberinho CONTATO: 4654687
-NOME:Jadiel ENDERECO: Rua do barberinho CONTATO:4444444
-NOME:Jadiel Silva da Cunha ENDERECO: Rua do barbeirinho 244 CONTATO:4654654
-NOME:Jadiel, ENDERECO: Rua do arnaldo, CONTATO:546546
+NOME:Jadiel, ENDERECO: manel ri, CONTATO:987493845
+Nome: cururu Cpf: 3456 Endereco: beira da lagoa Contato: 3131
+NOME:ioioioio, ENDERECO: sitio, CONTATO:45565632
+Nome: lucas Cpf: 1234567 Endereco: rua joaninha perdigao Telefone: 12333333
+Nome: rato assado Cpf: 1234567 Endereco: ru ada jujus Telefone: 57468
+Nome:jadiel Cpf: 123, Endereco: rua, Contato:556
+Nome:iuuuuuu Cpf: 3333, Endereco: tyui, Contato:9980
+Nome: uiiii Cpf: 6666 Endereco: ccccc Contato: 444
