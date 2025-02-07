@@ -12,8 +12,9 @@ import modelos.Usuario;
 
 public class ControleUsuarios {
     public static void cadastrarUsuario(Usuario user){
+        
         try(BufferedWriter bw = new BufferedWriter(new FileWriter("data/users.txt" , true))){
-            bw.write("Login: " + user.login + " Senha: " + user.senha);
+            bw.write("Tipo: " + user.tipo +" Login: " + user.login + " Senha: " + user.senha);
             bw.newLine();
         } catch (IOException e) {
             e.printStackTrace();
@@ -34,6 +35,7 @@ public class ControleUsuarios {
     public static void removerUsuario(String nomeUser){
         List<String> listaDeUsuarios = new ArrayList<>();
         List<String> listaFinal = new ArrayList<>();
+        nomeUser = nomeUser + " ";
         try(BufferedReader br = new BufferedReader(new FileReader("data/users.txt"))){
             while (br.ready()) {
                 listaDeUsuarios.add(br.readLine());

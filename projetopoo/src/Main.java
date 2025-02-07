@@ -17,10 +17,12 @@ public class Main{
         ControleUsuarios.cadastrarUsuario(u);
         ControleUsuarios.cadastrarUsuario(u2);
         ControleUsuarios.cadastrarUsuario(u3);*/
-        ControleUsuarios.autenticarUsuario("cururua", 4321);
+        //ControleUsuarios.autenticarUsuario("cururua", 4321);
         //ControleUsuarios.exibirUsuarios();
-        ControleUsuarios.removerUsuario("juju");
+        //ControleUsuarios.removerUsuario("juju");
         //ControleUsuarios.exibirUsuarios();
+        Screen.menuCadastroUsuario();
+        Screen.menuRemoverUsuario();
         
     }
 }

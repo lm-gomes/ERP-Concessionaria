@@ -1,10 +1,17 @@
 package view;
 import modelos.Veiculo;
+import modelos.Vendedor;
 import modelos.Carro;
+import modelos.Estoquista;
+import modelos.Gerente;
 import modelos.Moto;
+
+import java.io.IOException;
+import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 import controller.ControleEstoque;
+import controller.ControleUsuarios;
 
 public class Screen {
     public static void menuPrincipal(){
@@ -105,5 +112,53 @@ public class Screen {
         catch(Exception e){
             e.printStackTrace();
         }
+    }
+
+    public static void menuCadastroUsuario(){
+        try(Scanner sc = new Scanner(System.in)){
+            System.out.println("Insira o tipo de usuário:\n [1] Gerente\n [2] Estoquista\n [3] Vendedor\n>> ");
+            int userInput = sc.nextInt();
+            sc.nextLine();
+            System.out.println("Digite o login do usuário: ");
+            String login = sc.nextLine();
+            System.out.println("Digite a senha do usuário: ");
+            int senha = sc.nextInt();
+            
+            login = login + " ";
+            switch (userInput){
+                case 1:
+                    Gerente gerente = new Gerente(login, senha, 'G');
+                    ControleUsuarios.cadastrarUsuario(gerente);
+                    break;
+                case 2:
+                    Estoquista estoquista = new Estoquista(login , senha , 'E');
+                    ControleUsuarios.cadastrarUsuario(estoquista);
+                    break;
+                case 3:
+                    Vendedor vendedor = new Vendedor(login , senha, 'V');
+                    ControleUsuarios.cadastrarUsuario(vendedor);
+                    break;
+                default:
+                    System.out.println("Opção inválida.");
+                    break;
+            }
+
+            sc.close();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void menuRemoverUsuario(){
+        System.out.println("Digite o login do usuário que você deseja remover: \n >> ");
+        
+        try(Scanner sc = new Scanner(System.in)){
+           String userInput = sc.nextLine();
+           ControleUsuarios.removerUsuario(userInput);
+        } catch(NoSuchElementException e){
+            e.printStackTrace();
+        }
+
     }
 }
