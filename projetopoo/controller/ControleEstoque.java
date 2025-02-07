@@ -119,7 +119,7 @@ public class ControleEstoque{
         }
     }
 
-    public static void removerVeiculo(int index){
+    public static void removerVeiculo(int index, String nomeArquivo){
         
     }
 
