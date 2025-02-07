@@ -16,21 +16,34 @@ import controller.ControleUsuarios;
 public class Screen {
     public static void menuPrincipal(){
         try(Scanner scanner = new Scanner(System.in)){
-            System.out.print("[1]Cadastrar veiculo\n[2]Consultar veiculos\n[3]Remover veiculo\n>>");
+            System.out.print("[1]Venda\n[2]Gerenciar Estoque\n[3]Gerenciar Usuarios\n>>");
             int userInput = scanner.nextInt();
             switch(userInput){
                 case 1:{
-                    menuCadastroVeiculo();
+                    ControleEstoque.logEstoque("Data:" );
                     break;
                 }
 
                 case 2:{
-                    menuConsultaVeiculo();
+                    System.out.print("[1]Cadastrar veiculo\n[2]Consultar veiculos\n[3]Remover veiculo\n>>");
+                    userInput = scanner.nextInt();
+                    if(userInput == 1){
+                        menuCadastroVeiculo();
+                        
+                    }
+                    else if(userInput == 2){
+                        menuConsultaVeiculo();
+
+                    }
+                    else if(userInput == 3){
+                        menuRemoveVeiculo();
+
+                    }
                     break;
                 }
 
                 case 3:{
-
+                    
                     break;
                 }
             }
@@ -105,8 +118,12 @@ public class Screen {
         try(Scanner scanner = new Scanner(System.in)){
             System.out.print("[1]Carro\n[2]Moto\n>>");
             int userInput = scanner.nextInt();
+            String nomeArquivo = userInput == 1 ? "data/carros.txt" : "data/motos.txt";
             System.out.println("Digite o indice: ");
             int userIndex = scanner.nextInt();
+            ControleEstoque.consultarEstoque(nomeArquivo);
+            ControleEstoque.removerVeiculo(userIndex, nomeArquivo);
+            
             
         }
         catch(Exception e){

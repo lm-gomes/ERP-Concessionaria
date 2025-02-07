@@ -3,6 +3,9 @@ package controller;
 
 import java.io.*;
 import java.util.*;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 import modelos.Carro;
 import modelos.Moto;
 
@@ -111,6 +114,7 @@ public class ControleEstoque{
 
 
     public static void consultarEstoque(String nomeArquivo){
+        System.out.println("---------------------------------------------");
         verificarEstoque("data/m_carros.txt");
 
         try(BufferedReader br = new BufferedReader(new FileReader(nomeArquivo));){
@@ -128,8 +132,39 @@ public class ControleEstoque{
         }
     }
 
-    public static void removerVeiculo(int index){
-        
+    public static void removerVeiculo(int index, String nomeArquivo){
+        List<String> listaDeVeiculos = new ArrayList<>();
+
+        try(BufferedReader br = new BufferedReader(new FileReader(nomeArquivo))){    
+            for(int i = 1; br.ready(); i++){
+                String linha =  br.readLine();
+                if(i != index){
+                    listaDeVeiculos.add(linha);
+                }
+            }
+        }
+        catch(Exception e){
+            e.printStackTrace();
+
+        }
+
+        try(BufferedWriter bw = new BufferedWriter(new FileWriter(nomeArquivo))){
+            for(String veiculo: listaDeVeiculos){
+                bw.write(veiculo);
+                bw.newLine();
+            }
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+
+
     }
 
+    public static void logEstoque(String mensagem){
+        LocalDateTime data = LocalDateTime.now();
+        DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
+        String logData = data.format(formato);
+        System.out.println(mensagem + logData);    
+    }
 }

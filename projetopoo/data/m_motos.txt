@@ -1,2 +1,9 @@
+<<<<<<< HEAD
 louquinha
 louquinha
+=======
+4
+4
+xisjosta
+xisjosta
+>>>>>>> e1cfdb074494944b6541a6eb89ece5b39c2bdf66
