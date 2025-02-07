@@ -12,7 +12,7 @@ import controller.ControleVendas;
 public class Screen {
     public static void menuPrincipal(){
         try(Scanner scanner = new Scanner(System.in)){
-            System.out.print("[1]Cadastrar veiculo\n[2]Consultar veiculos\n[3]Remover veiculo\n[4]Cadastrar Cliente\n[5]Vender Veiculo\n>>");
+            System.out.print("[1]Cadastrar veiculo\n[2]Consultar veiculos\n[3]Remover veiculo\n[4]Cadastrar Cliente\n[5]Remover cliente\n[6]Vender veiculo\n[7]Alterar Dados do Cliente\n[8]Exibir clientes\n>>");
             int userInput = scanner.nextInt();
             switch(userInput){
                 case 1:{
@@ -31,9 +31,22 @@ public class Screen {
                 }
                 case 4:{
                     menuCadastrarCliente();
+                    break;
                 }
                 case 5:{
+                    menuRemoverCliente();
+                    break;
+                }
+                case 6:{
                     menuVendas();
+                    break;
+                }
+                case 7:{
+                    menuAlterarDadosCliente();
+                    break;
+                }
+                case 8:{
+                    ControleClientes.exibirClientes();
                 }
             }
         }
@@ -119,14 +132,22 @@ public class Screen {
     public static void menuCadastrarCliente(){
         try(Scanner scan = new Scanner(System.in)){
             System.out.println("NOME: ");
-            String userNome = scan.nextLine();
-            System.out.println("ENDERECO: ");
-            String userEndereco = scan.nextLine();
-            System.out.println("CONTATO: ");
-            int userContato = scan.nextInt();
+            String clienteNome = scan.nextLine();
 
-            Cliente cliente = new Cliente(userNome, userEndereco, userContato);
+            System.out.println("CPF: ");
+            int clienteCpf = scan.nextInt();
+            scan.nextLine();
+
+            System.out.println("ENDERECO: ");
+            String clienteEndereco = scan.nextLine();
+
+            System.out.println("CONTATO: ");
+            int clienteContato = scan.nextInt();
+
+            Cliente cliente = new Cliente(clienteNome, clienteCpf, clienteEndereco, clienteContato);
             ControleClientes.cadastrarClientes(cliente);
+
+            System.out.println("Cliente cadastrado com sucesso!");
         }
         catch(Exception e){
             e.printStackTrace();
@@ -135,21 +156,85 @@ public class Screen {
 
     public static void menuVendas(){
         try(Scanner scan = new Scanner(System.in)){
+            ControleClientes.exibirClientes();
+
+            System.out.print("Indice do cliente que fara a compra\n>>");
+            int id = scan.nextInt();
+
             System.out.print("[1]Carro\n[2]Moto\n>>");
             int userInput = scan.nextInt();
             if(userInput == 1){
                 ControleVendas.exibirVeiculo("data/carros.txt");
+
+                System.out.print("Digite o indice do carro para a venda\n>>");
+                int indice = scan.nextInt();
+
+                // ControleEstoque.removerVeiculo(indice, "data/carros.txt");
+
+                ControleVendas.relatorioDeVendas(id, indice, "data/carros.txt");
+
+                System.out.println("Carro vendido!");
             }
             else{
                 ControleVendas.exibirVeiculo("data/motos.txt");
-            }
+                System.out.print("Digite o indice da moto para a venda\n>>");
+                int indice = scan.nextInt();
+                
+                // ControleEstoque.removerVeiculo(indice, "data/moto.txt");
 
-            System.out.println("Digite o modelo\n>>");
-            String modelo = scan.nextLine();
+                ControleVendas.relatorioDeVendas(id, indice, "data/moto.txt");
+
+                System.out.println("Moto vendida!");
+            }
         }
         catch(Exception e){
             System.out.println(e.getMessage());
         }
 
+    }
+
+    public static void menuAlterarDadosCliente(){
+        try(Scanner scan = new Scanner(System.in)){
+            ControleClientes.exibirClientes();
+
+            System.out.print("Digite o indice do cliente para trocar suas informacoes\n>>");
+            int index = scan.nextInt();
+            scan.nextLine();
+
+            System.out.println("Nao e recomendado alterar nome e cpf");
+
+            System.out.print("Digite o nome do cliente\n>>");
+            String nome = scan.nextLine();
+
+            System.out.print("Digite o cpf do cliente\n>>");
+            int cpf = scan.nextInt();
+            scan.nextLine();
+
+            System.out.print("Digite o novo endereco\n>>");
+            String end = scan.nextLine();
+
+            System.out.print("Digite o novo numero de telefone\n>>");
+            int tel = scan.nextInt();
+
+            ControleClientes.alterarDadosCliente(index, nome, cpf, end, tel);
+
+            System.out.println("Informacoes atualizadas!");
+        }
+    }
+
+    public static void menuRemoverCliente(){
+        try(Scanner scan = new Scanner(System.in)){
+            ControleClientes.exibirClientes();
+
+            System.out.print("Digite o indice do cliente a remover\n>>");
+            int index = scan.nextInt();
+
+            ControleClientes.removerCliente(index);
+
+            System.out.println("Cliente removido!");
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
     }
 }
