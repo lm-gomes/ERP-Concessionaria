@@ -15,6 +15,7 @@ import controller.ControleUsuarios;
 
 public class Screen {
     public static void menuPrincipal(){
+        // Esse menu é só pra teste? pq não faz sentido o menu PRINCIPAL ter todas as op do programa, sendo que vamos usar as permissões :)
         try(Scanner scanner = new Scanner(System.in)){
             System.out.print("[1]Venda\n[2]Gerenciar Estoque\n[3]Gerenciar Usuarios\n>>");
             int userInput = scanner.nextInt();
@@ -139,10 +140,15 @@ public class Screen {
             sc.nextLine();
             System.out.println("Digite o login do usuário: ");
             String login = sc.nextLine();
-            System.out.println("Digite a senha do usuário: ");
-            int senha = sc.nextInt();
-            sc.nextLine();
-            login = login + " ";
+            login = login.toLowerCase();
+            int senha = 0; 
+            if(ControleUsuarios.validarLogin(login)){
+                System.out.println("Digite a senha do usuário: ");
+                senha = sc.nextInt();
+                sc.nextLine();
+            }
+            
+            
             switch (userInput){
                 case 1:
                     Gerente gerente = new Gerente(login, senha, 'G');
@@ -161,6 +167,8 @@ public class Screen {
                     break;
             }
 
+            sc.close();
+
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -178,5 +186,110 @@ public class Screen {
             e.printStackTrace();
         }
 
+    }
+
+    public static void menuGerente(String login){
+        System.out.println("Bem - vindo, " + login);
+        System.out.print("Escolha uma operação:\n [1] Operar usuários.\n [2] Operar estoque.\n [3] Fazer venda.\n  >> ");
+        Scanner sc = new Scanner(System.in);
+        int userOp = sc.nextInt();
+        
+        switch (userOp) {
+            case 1:
+                System.out.print("O que deseja fazer:\n [1] Cadastrar novo usuário.\n [2] Remover usuário.");
+                int input1 = sc.nextInt();
+                switch (input1) {
+                    case 1:
+                        menuCadastroUsuario();
+                        break;
+                    case 2:
+                        menuRemoverUsuario();
+                        break;
+                    default:
+                        System.out.println("Opção inválida.");
+                        break;
+                }
+                break;
+            case 2:
+                System.out.print("O que deseja fazer:\n [1] Cadastrar novo veiculo.\n [2] Remover veíuculo."); // Realmente é necessário o remover veículo? A remoção não é feita automaticamente após uma venda? 
+                int input2 = sc.nextInt();
+                switch (input2) {
+                    case 1:
+                        menuCadastroVeiculo();
+                        break;
+                    case 2:
+                        menuRemoveVeiculo();
+                        break;
+                    default:
+                        System.out.println("Opção inválida.");
+                        break;
+                }
+                break;
+            case 3:
+                System.out.print("O que deseja fazer:\n [1] Vender veículo\n [2] Cadastrar cliente.\n [3] Alterar dados do cliente.");
+                int input3 = sc.nextInt();
+                switch (input3) {
+                    case 1:
+                        System.out.println("sem a função:(");
+                        break;
+                    case 2:
+                        System.out.println("sem a função:(");
+                        break;
+                    case 3:
+                        System.out.println("sem a função:(");
+                        break;
+                    default: 
+                        System.out.println("Opção inválida.");
+                        break;
+                }
+                break;
+            default:
+                System.out.println("Opção inválida.");
+                break;
+        }
+        sc.close();
+    }
+
+    public static void menuEstoquista(String login){
+        System.out.println("Bem - vindo, " + login);
+        System.out.print("O que deseja fazer:\n [1] Cadastrar novo veiculo.\n [2] Remover veíuculo.");
+        Scanner sc = new Scanner(System.in);
+        int userOp = sc.nextInt();
+        
+        switch (userOp) {
+            case 1:
+                menuCadastroVeiculo();
+                break;
+            case 2:
+                menuRemoveVeiculo();
+                break;
+            default:
+                System.out.println("Opção inválida.");
+                break;
+        }
+    sc.close();
+    }
+
+    public static void menuVendedor(String login){
+        System.out.println("Bem - vindo, " + login);
+        System.out.print("O que deseja fazer:\n [1] Vender veículo\n [2] Cadastrar cliente.\n [3] Alterar dados do cliente.");
+        Scanner sc = new Scanner(System.in);
+        int userOp = sc.nextInt();
+        
+        switch (userOp) {
+            case 1:
+                System.out.println("sem a função:(");
+                break;
+            case 2:
+                System.out.println("sem a função:(");
+                break;
+            case 3:
+                System.out.println("sem a função:(");
+                break;
+            default:
+                System.out.println("Opção inválida.");
+                break;
+        }
+    sc.close();
     }
 }

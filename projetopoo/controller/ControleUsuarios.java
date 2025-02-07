@@ -12,14 +12,20 @@ import modelos.Usuario;
 
 public class ControleUsuarios {
     public static void cadastrarUsuario(Usuario user){
-        
-        try(BufferedWriter bw = new BufferedWriter(new FileWriter("data/users.txt" , true))){
-            bw.write("Tipo: " + user.tipo +" Login: " + user.login + " Senha: " + user.senha);
-            bw.newLine();
-        } catch (IOException e) {
-            e.printStackTrace();
+        if(validarLogin(user.login)){
+            user.login = user.login + " ";
+            try(BufferedWriter bw = new BufferedWriter(new FileWriter("data/users.txt" , true))){
+                user.login = user.login.toLowerCase();
+                bw.write("Tipo: " + user.tipo +" Login: " + user.login + " Senha: " + user.senha);
+                bw.newLine();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }  
+            System.out.println("Cadastro sucedido."); 
+        } else{
+            System.out.println("Login inválido. Tente novamente.");
         }
-
+        
     }
 
     public static void exibirUsuarios(){
@@ -64,30 +70,54 @@ public class ControleUsuarios {
 
     public static void autenticarUsuario(String login , int senha){
         try(BufferedReader br = new BufferedReader(new FileReader("data/users.txt"))){
+            login = login.toLowerCase();
             List<String> listaDeUsuarios = new ArrayList<>();
             String s = Integer.toString(senha);
 
             while(br.ready()){
                 listaDeUsuarios.add(br.readLine());
             }
-            boolean naoAchou = false;
+            boolean foundLine = false;
             for (String user : listaDeUsuarios) {
                 if(user.contains(login) && user.contains(s)){
                     System.out.println("Usuário autorizado.");
-                    naoAchou = false;
+                    foundLine = true;
                     break;
                 }else{
-                    naoAchou = true;
+                    foundLine = false;
                 }
             }
 
-            if(naoAchou){
+            if(!foundLine){
                 System.out.println("Usuário ou senha incorretos.");
             }
 
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public static boolean validarLogin(String login){
+        boolean foundSpace = false;
+        login = login.toLowerCase();
+        try(BufferedReader br = new BufferedReader((new FileReader("data/users.txt")))){
+            List <String> listaUsuarios = new ArrayList<>();
+            while (br.ready()) {
+                listaUsuarios.add(br.readLine());
+            }
+            for (String user : listaUsuarios) {
+                if(login.contains(" ") || login.contains(user)){
+                    foundSpace = true;;
+                    break;
+                    //System.out.println("Login inválido.");
+                }  
+            }
+            
+
+        } catch(IOException e){
+            e.printStackTrace();
+        }
+        return foundSpace;
     }
 
 }

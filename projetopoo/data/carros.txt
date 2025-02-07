@@ -50,3 +50,5 @@ Marca: oi Modelo: camila Ano: 1  Preco: 1.0 Cor:red KM: 0.0
 Marca: oi Modelo: camila Ano: 1  Preco: 1.0 Cor:red KM: 0.0
 Marca: Fiat Modelo: Palio Ano: 1  Preco: 1.0 Cor:red KM: 0.0
 Marca: Fiat Modelo: Palio Ano: 1  Preco: 1.0 Cor:red KM: 0.0
+Marca: maria Modelo: julia Ano: 1  Preco: 1.0 Cor:red KM: 0.0
+Marca: maria Modelo: julia Ano: 1  Preco: 1.0 Cor:red KM: 0.0

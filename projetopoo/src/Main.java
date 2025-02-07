@@ -21,8 +21,9 @@ public class Main{
         //ControleUsuarios.exibirUsuarios();
         //ControleUsuarios.removerUsuario("juju");
         //ControleUsuarios.exibirUsuarios();
-        Screen.menuCadastroUsuario();
-        Screen.menuRemoverUsuario();
+        //Screen.menuCadastroUsuario();
+        //Screen.menuRemoverUsuario();
+        Screen.menuGerente("julia");
         
     }
 }
