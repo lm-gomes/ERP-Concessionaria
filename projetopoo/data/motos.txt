@@ -3,3 +3,5 @@ Marca: 4 Modelo: 4 Ano: 1 Preco: 1.0 Cor:cor KM: 1.0
 Marca: 4 Modelo: 4 Ano: 1 Preco: 1.0 Cor:cor KM: 1.0
 Marca: honda Modelo: xisjosta Ano: 1 Preco: 1.0 Cor:cor KM: 1.0
 Marca: honda Modelo: xisjosta Ano: 1 Preco: 1.0 Cor:cor KM: 1.0
+Marca: moto Modelo: boa Ano: 1 Preco: 1.0 Cor:cor KM: 1.0
+Marca: moto Modelo: boa Ano: 1 Preco: 1.0 Cor:cor KM: 1.0

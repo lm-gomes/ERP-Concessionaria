@@ -77,8 +77,8 @@ public class ControleEstoque{
                 bw.newLine();
                 bwm.write(car.modelo);
                 bwm.newLine();
-                
             }
+            logEstoque("[LOG-SISTEMA]Veículo cadastrado: Modelo - " + car.modelo);
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -123,27 +123,57 @@ public class ControleEstoque{
         }
     }
 
-    public static void removerVeiculo(int index, String nomeArquivo){
+    public static void removerVeiculo(int index, String nomeArquivo, String arquivoModelo){
         List<String> listaDeVeiculos = new ArrayList<>();
+        List<String> listaDeModelos = new ArrayList<>();
 
-        try(BufferedReader br = new BufferedReader(new FileReader(nomeArquivo))){    
+        String logVeiculoRemovido = "";
+
+        try(BufferedReader br = new BufferedReader(new FileReader(nomeArquivo)); BufferedReader brm = new BufferedReader(new FileReader(arquivoModelo))){    
             for(int i = 1; br.ready(); i++){
                 String linha =  br.readLine();
                 if(i != index){
                     listaDeVeiculos.add(linha);
                 }
+                else{
+                    logVeiculoRemovido = linha;
+                }
+            }  
+
+            boolean modeloEncontrado = false;
+            String linha = "";
+            while(brm.ready()){
+                linha = brm.readLine();
+                if(!modeloEncontrado){
+                    if(!logVeiculoRemovido.contains(linha)){
+                       listaDeModelos.add(linha);
+                    }
+                    else{
+                        modeloEncontrado = true;
+                    }
+                }
+                else{
+                    listaDeModelos.add(linha);
+                }
             }
+            logEstoque("[LOG-SISTEMA]Veículo removido: Modelo - " + linha);
         }
         catch(Exception e){
             e.printStackTrace();
 
         }
 
-        try(BufferedWriter bw = new BufferedWriter(new FileWriter(nomeArquivo))){
+        try(BufferedWriter bw = new BufferedWriter(new FileWriter(nomeArquivo)); BufferedWriter bwm = new BufferedWriter(new FileWriter(arquivoModelo))){
             for(String veiculo: listaDeVeiculos){
                 bw.write(veiculo);
                 bw.newLine();
             }
+            String logModelo;
+            for(String modelo: listaDeModelos){
+                bwm.write(modelo);
+                bwm.newLine();
+            }
+            
         }
         catch(Exception e){
             e.printStackTrace();
@@ -156,6 +186,29 @@ public class ControleEstoque{
         LocalDateTime data = LocalDateTime.now();
         DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
         String logData = data.format(formato);
-        System.out.println(mensagem + logData);    
+        System.out.println(mensagem + " " + logData);
+        
+        try(BufferedWriter bw = new BufferedWriter(new FileWriter("data/logEstoque.txt"))){
+                bw.write(mensagem + " " + logData);
+                bw.newLine();
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    public static void consultarLog(){
+        try(BufferedReader br = new BufferedReader(new FileReader("data/logEstoque.txt"));){
+            System.out.println("---------------------------------------------");
+            while(br.ready()){
+                System.out.println(br.readLine());
+            }
+        }
+        catch(FileNotFoundException e){
+            e.printStackTrace();
+        }
+        catch(IOException e){
+            e.printStackTrace();
+        }
     }
 }

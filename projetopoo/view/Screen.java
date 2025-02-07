@@ -18,7 +18,7 @@ public class Screen {
                 }
 
                 case 2:{
-                    System.out.print("[1]Cadastrar veiculo\n[2]Consultar veiculos\n[3]Remover veiculo\n>>");
+                    System.out.print("[1]Cadastrar veiculo\n[2]Consultar veiculos\n[3]Remover veiculo\n[4]Registros\n>>");
                     userInput = scanner.nextInt();
                     if(userInput == 1){
                         menuCadastroVeiculo();
@@ -32,12 +32,19 @@ public class Screen {
                         menuRemoveVeiculo();
 
                     }
+                    else if(userInput == 4){
+                        ControleEstoque.consultarLog();
+                    }
                     break;
                 }
 
                 case 3:{
                     
                     break;
+                }
+
+                case 4:{
+                    
                 }
             }
         }
@@ -112,10 +119,12 @@ public class Screen {
             System.out.print("[1]Carro\n[2]Moto\n>>");
             int userInput = scanner.nextInt();
             String nomeArquivo = userInput == 1 ? "data/carros.txt" : "data/motos.txt";
+            String arquivoModelo = userInput == 1 ? "data/m_carros.txt" : "data/m_motos.txt";
+
             System.out.println("Digite o indice: ");
             int userIndex = scanner.nextInt();
             ControleEstoque.consultarEstoque(nomeArquivo);
-            ControleEstoque.removerVeiculo(userIndex, nomeArquivo);
+            ControleEstoque.removerVeiculo(userIndex, nomeArquivo, arquivoModelo);
             
             
         }
