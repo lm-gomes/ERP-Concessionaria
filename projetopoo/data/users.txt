@@ -5,9 +5,9 @@ Tipo: G Login: akka  Senha: 1525
 Tipo: G Login: marianee  Senha: 6464
 Tipo: V Login: kkkk  Senha: 7667
 Tipo: G Login: ahahah  Senha: 972
-Tipo: V Login: juLINHa  Senha: 1232
 Tipo: V Login: lucas  Senha: 5612
 Tipo: E Login: marcola  Senha: 2222
 Tipo: E Login: mas  Senha: 1321
 Tipo: V Login: lucas  Senha: 3553
 Tipo: V Login: ssssss  Senha: 5698
+
