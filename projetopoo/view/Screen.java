@@ -115,7 +115,8 @@ public class Screen {
     }
 
     public static void menuCadastroUsuario(){
-        try(Scanner sc = new Scanner(System.in)){
+        try{
+            Scanner sc = new Scanner(System.in);
             System.out.println("Insira o tipo de usuário:\n [1] Gerente\n [2] Estoquista\n [3] Vendedor\n>> ");
             int userInput = sc.nextInt();
             sc.nextLine();
@@ -123,7 +124,7 @@ public class Screen {
             String login = sc.nextLine();
             System.out.println("Digite a senha do usuário: ");
             int senha = sc.nextInt();
-            
+            sc.nextLine();
             login = login + " ";
             switch (userInput){
                 case 1:
@@ -143,7 +144,6 @@ public class Screen {
                     break;
             }
 
-            sc.close();
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -153,7 +153,8 @@ public class Screen {
     public static void menuRemoverUsuario(){
         System.out.println("Digite o login do usuário que você deseja remover: \n >> ");
         
-        try(Scanner sc = new Scanner(System.in)){
+        try{
+            Scanner sc = new Scanner(System.in);
            String userInput = sc.nextLine();
            ControleUsuarios.removerUsuario(userInput);
         } catch(NoSuchElementException e){
