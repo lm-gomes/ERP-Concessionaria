@@ -23,7 +23,8 @@ public class Main{
         //ControleUsuarios.exibirUsuarios();
         //Screen.menuCadastroUsuario();
         //Screen.menuRemoverUsuario();
-        Screen.menuGerente("julia");
+        //Screen.menuGerente("julia");
+        Screen.menuPrincipal();
         
     }
 }

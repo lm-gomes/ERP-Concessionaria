@@ -15,39 +15,18 @@ import controller.ControleUsuarios;
 
 public class Screen {
     public static void menuPrincipal(){
-        // Esse menu é só pra teste? pq não faz sentido o menu PRINCIPAL ter todas as op do programa, sendo que vamos usar as permissões :)
-        try(Scanner scanner = new Scanner(System.in)){
-            System.out.print("[1]Venda\n[2]Gerenciar Estoque\n[3]Gerenciar Usuarios\n>>");
-            int userInput = scanner.nextInt();
-            switch(userInput){
-                case 1:{
-                    ControleEstoque.logEstoque("Data:" );
-                    break;
-                }
+        
+        try{
+            Scanner sc = new Scanner(System.in);
+            System.out.println("Insira seu login: ");
+            String login = sc.nextLine();
+            System.out.println("Digite sua senha: ");
+            int senha = sc.nextInt();
 
-                case 2:{
-                    System.out.print("[1]Cadastrar veiculo\n[2]Consultar veiculos\n[3]Remover veiculo\n>>");
-                    userInput = scanner.nextInt();
-                    if(userInput == 1){
-                        menuCadastroVeiculo();
-                        
-                    }
-                    else if(userInput == 2){
-                        menuConsultaVeiculo();
-
-                    }
-                    else if(userInput == 3){
-                        menuRemoveVeiculo();
-
-                    }
-                    break;
-                }
-
-                case 3:{
-                    
-                    break;
-                }
+            if(ControleUsuarios.autenticarUsuario(login, senha)){
+                ControleUsuarios.tipoUser(login);
             }
+
         }
         catch(Exception e){
             System.out.print("Oi");
@@ -179,7 +158,7 @@ public class Screen {
         System.out.println("Digite o login do usuário que você deseja remover: \n >> ");
         
         try{
-            Scanner sc = new Scanner(System.in);
+           Scanner sc = new Scanner(System.in);
            String userInput = sc.nextLine();
            ControleUsuarios.removerUsuario(userInput);
         } catch(NoSuchElementException e){
@@ -292,4 +271,6 @@ public class Screen {
         }
     sc.close();
     }
+
+    
 }
