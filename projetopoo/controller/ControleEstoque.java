@@ -187,10 +187,8 @@ public class ControleEstoque{
         catch(Exception e){
             e.printStackTrace();
         }
-
-
     }
-
+    
     public static void logEstoque(String mensagem){
         LocalDateTime data = LocalDateTime.now();
         DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
