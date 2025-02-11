@@ -7,3 +7,4 @@ CLIENTE: Nome:jadiel Cpf: 123 | CARRO: Marca: Oi Modelo: Ola Ano: 123 Preco: 123
  Nome:iuuuuuu Cpf: 3333, Endereco: tyui, Contato:9980 | CARRO: Marca: jadiel Modelo: rapidao Ano: 1  Preco: 1.0 Cor:red KM: 0.0
  Cliente:ggg Cpf: 444 | CARRO: Marca: Oi Modelo: Ola Ano: 123 Preco: 123333.0 Cor:opa KM: 0.0 Qtd: 1
  NOME:cururu | CARRO: Marca: Oi Modelo: Ola Ano: 123 Preco: 123333.0 Cor:opa KM: 0.0 Qtd: 1
+ Nome: rato assado Cpf: 1234567 | CARRO: Marca: jadi Modelo: malaca Ano: 1  Preco: 1.0 Cor:red KM: 0.0

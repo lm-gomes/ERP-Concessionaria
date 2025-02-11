@@ -1,4 +1,3 @@
-NOME: fkjgdfkg ENDERECO:  gdfgndflg CONTATO: 46544
 NOME: JAdie� ENDERECO:  fgdfgdfg CONTATO: 4644684
 NOME: Jadiel ENDERECO:  RuaNaoSei CONTATO: 5465454
 NOME: Jadiel ENDERECO:  Rua nao sei CONTATO: 54668748
@@ -10,6 +9,7 @@ Nome: cururu Cpf: 3456 Endereco: beira da lagoa Contato: 3131
 NOME:ioioioio, ENDERECO: sitio, CONTATO:45565632
 Nome: lucas Cpf: 1234567 Endereco: rua joaninha perdigao Telefone: 12333333
 Nome: rato assado Cpf: 1234567 Endereco: ru ada jujus Telefone: 57468
-Nome:jadiel Cpf: 123, Endereco: rua, Contato:556
+Nome: jadiissss Cpf: 123 Endereco: casa Contato: 3243221
 Nome:iuuuuuu Cpf: 3333, Endereco: tyui, Contato:9980
 Nome: uiiii Cpf: 6666 Endereco: ccccc Contato: 444
+Nome:cururu preto Cpf: 1234, Endereco: casa grazadeus, Contato:3434

@@ -1,4 +1,3 @@
-NOME: fkjgdfkg
 NOME: JAdie�
 NOME: Jadiel
 NOME: Jadiel
@@ -10,6 +9,7 @@ Nome: cururu Cpf: 3456
 NOME:ioioioio
 Nome: lucas Cpf: 1234567
 Nome: rato assado Cpf: 1234567
-Nome:jadiel Cpf: 123
+Nome: jadiissss Cpf: 123
 Nome:iuuuuuu Cpf: 3333
 Nome: uiiii Cpf: 6666
+Cliente:cururu preto Cpf: 1234

@@ -70,6 +70,34 @@ public class ControleUsuarios {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+        List<String> listaDeLogins = new ArrayList<>();
+        List<String> listaFinalLogins = new ArrayList<>();
+
+        try(BufferedReader br = new BufferedReader(new FileReader("data/logins.txt"))){
+            while (br.ready()) {
+                listaDeLogins.add(br.readLine());
+            }
+        } catch(Exception e){
+            e.printStackTrace();
+        }
+
+
+        for(String user : listaDeLogins){
+            if(!(user.contains(nomeUser))){
+                listaFinalLogins.add(user);
+            }
+            
+        }
+
+        try(BufferedWriter bw = new BufferedWriter(new FileWriter("data/logins.txt"))){
+            for (String user : listaFinalLogins) {
+                bw.write(user);
+                bw.newLine();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public static boolean autenticarUsuario(String login , int senha){
@@ -132,21 +160,26 @@ public class ControleUsuarios {
                 listaUsuarios.add(br.readLine());
             }
             
+            
 
             for (String user : listaUsuarios) {
                 if(user.contains(login) && user.contains("G")){
                     Screen.menuGerente(login);
+                    
                     break;
                 } else if(user.contains(login) && user.contains("E")){
                     Screen.menuEstoquista(login);
+                    
                     break;
                 } else if(user.contains(login) && user.contains("V")){
                     Screen.menuVendedor(login);
+                
                     break;
-                } else{
-                    System.out.println("Falha ao encontrar usuário.");
-                }
+                } 
             }
+
+            
+
         } catch (IOException e) {
             // TODO: handle exception
         }

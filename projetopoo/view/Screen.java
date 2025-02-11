@@ -211,17 +211,23 @@ public class Screen {
                 }
                 break;
             case 3:
-                System.out.print("O que deseja fazer:\n [1] Vender veículo\n [2] Cadastrar cliente.\n [3] Alterar dados do cliente.");
+                System.out.print("O que deseja fazer:\n [1] Vender veículo\n [2] Cadastrar cliente.\n [3] Alterar dados do cliente.\n [4] Remover cliente. \n [5] Exibir clientes.\n >>");
                 int input3 = sc.nextInt();
                 switch (input3) {
                     case 1:
-                        System.out.println("sem a função:(");
+                        menuVendas();
                         break;
                     case 2:
-                        System.out.println("sem a função:(");
+                        menuCadastrarCliente();
                         break;
                     case 3:
-                        System.out.println("sem a função:(");
+                        menuAlterarDadosCliente();
+                        break;
+                    case 4:
+                        menuRemoverCliente();
+                        break;
+                    case 5:
+                        ControleClientes.exibirClientes();
                         break;
                     default: 
                         System.out.println("Opção inválida.");
@@ -257,23 +263,29 @@ public class Screen {
 
     public static void menuVendedor(String login){
         System.out.println("Bem - vindo, " + login);
-        System.out.print("O que deseja fazer:\n [1] Vender veículo\n [2] Cadastrar cliente.\n [3] Alterar dados do cliente.\n [4] Remover cliente.\n>>");
+        System.out.print("O que deseja fazer:\n [1] Vender veículo\n [2] Cadastrar cliente.\n [3] Alterar dados do cliente.\n [4] Remover cliente. \n [5] Exibir clientes.\n >>");
         Scanner sc = new Scanner(System.in);
         int userOp = sc.nextInt();
         
         switch (userOp) {
             case 1:
-                System.out.println("sem a função:(");
-                break;
-            case 2:
-                System.out.println("sem a função:(");
-                break;
-            case 3:
-                System.out.println("sem a função:(");
-                break;
-            default:
-                System.out.println("Opção inválida.");
-                break;
+                        menuVendas();
+                        break;
+                    case 2:
+                        menuCadastrarCliente();
+                        break;
+                    case 3:
+                        menuAlterarDadosCliente();
+                        break;
+                    case 4:
+                        menuRemoverCliente();
+                        break;
+                    case 5:
+                        ControleClientes.exibirClientes();
+                        break;
+                    default: 
+                        System.out.println("Opção inválida.");
+                        break;
         }
         sc.close();
     }

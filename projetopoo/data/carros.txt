@@ -15,7 +15,6 @@ Marca: josue Modelo: zebrinha Ano: 2222  Preco: 44.0 Cor: KM: 1.0
 Marca: josue Modelo: zebrinha Ano: 2222  Preco: 44.0 Cor: KM: 1.0
 Marca: joao Modelo: zebrola Ano: 11  Preco: 4.0 Cor:5 KM: 2.0
 Marca: joao Modelo: zebrola Ano: 11  Preco: 4.0 Cor:5 KM: 2.0
-Marca: joao Modelo: zebrola Ano: 11  Preco: 4.0 Cor:5 KM: 2.0
 Marca: ksks Modelo: lontra Ano: 1544  Preco: 122.0 Cor:1 KM: 1.0
 Marca: ksks Modelo: lontra Ano: 1544  Preco: 122.0 Cor:1 KM: 1.0
 Marca: ksks Modelo: lontra Ano: 1544  Preco: 122.0 Cor:1 KM: 1.0
