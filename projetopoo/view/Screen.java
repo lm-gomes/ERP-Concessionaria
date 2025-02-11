@@ -251,7 +251,7 @@ public class Screen {
 
     public static void menuVendedor(String login){
         System.out.println("Bem - vindo, " + login);
-        System.out.print("O que deseja fazer:\n [1] Vender veículo\n [2] Cadastrar cliente.\n [3] Alterar dados do cliente.");
+        System.out.print("O que deseja fazer:\n [1] Vender veículo\n [2] Cadastrar cliente.\n [3] Alterar dados do cliente.\n [4] Remover cliente.\n>>");
         Scanner sc = new Scanner(System.in);
         int userOp = sc.nextInt();
         
