@@ -62,3 +62,5 @@ Marca: jadiel Modelo: xuxu Ano: 1  Preco: 1.0 Cor:red KM: 0.0
 Marca: jadiel Modelo: xuxu Ano: 1  Preco: 1.0 Cor:red KM: 0.0
 Marca: dfg Modelo: dfg Ano: 1  Preco: 1.0 Cor:red KM: 0.0
 Marca: dfg Modelo: dfg Ano: 1  Preco: 1.0 Cor:red KM: 0.0
+Marca: jadi Modelo: malaca Ano: 1  Preco: 1.0 Cor:red KM: 0.0
+Marca: jadi Modelo: malaca Ano: 1  Preco: 1.0 Cor:red KM: 0.0

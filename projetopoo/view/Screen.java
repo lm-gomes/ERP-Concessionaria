@@ -1,4 +1,6 @@
 package view;
+
+import modelos.Usuario;
 import modelos.Veiculo;
 import modelos.Vendedor;
 import modelos.Carro;

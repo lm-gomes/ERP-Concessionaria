@@ -1,6 +1,4 @@
 Tipo: G Login: maria  Senha: 1234
 Tipo: E Login: mariazona  Senha: 1323
 Tipo: G Login: marina  Senha: 1211
-Tipo: G Login: marina  Senha: 122
-Tipo: G Login: marina  Senha: 1212
 Tipo: G Login: lucas  Senha: 237327

@@ -136,10 +136,13 @@ public class ControleUsuarios {
             for (String user : listaUsuarios) {
                 if(user.contains(login) && user.contains("G")){
                     Screen.menuGerente(login);
+                    break;
                 } else if(user.contains(login) && user.contains("E")){
                     Screen.menuEstoquista(login);
+                    break;
                 } else if(user.contains(login) && user.contains("V")){
                     Screen.menuVendedor(login);
+                    break;
                 } else{
                     System.out.println("Falha ao encontrar usuário.");
                 }
