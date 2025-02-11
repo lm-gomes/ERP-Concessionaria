@@ -5,6 +5,7 @@ import modelos.Carro;
 import modelos.Estoquista;
 import modelos.Gerente;
 import modelos.Moto;
+import modelos.Cliente;
 
 import java.io.IOException;
 import java.util.NoSuchElementException;
@@ -12,6 +13,8 @@ import java.util.Scanner;
 
 import controller.ControleEstoque;
 import controller.ControleUsuarios;
+import controller.ControleClientes;
+import controller.ControleVendas;
 
 public class Screen {
     public static void menuPrincipal(){
@@ -99,10 +102,12 @@ public class Screen {
             System.out.print("[1]Carro\n[2]Moto\n>>");
             int userInput = scanner.nextInt();
             String nomeArquivo = userInput == 1 ? "data/carros.txt" : "data/motos.txt";
+            String arquivoModelo = userInput == 1 ? "data/m_carros.txt" : "data/m_motos.txt";
+
             System.out.println("Digite o indice: ");
             int userIndex = scanner.nextInt();
             ControleEstoque.consultarEstoque(nomeArquivo);
-            ControleEstoque.removerVeiculo(userIndex, nomeArquivo);
+            ControleEstoque.removerVeiculo(userIndex, nomeArquivo, arquivoModelo);
             
             
         }
@@ -126,7 +131,6 @@ public class Screen {
                 senha = sc.nextInt();
                 sc.nextLine();
             }
-            
             
             switch (userInput){
                 case 1:
@@ -222,7 +226,7 @@ public class Screen {
                         break;
                 }
                 break;
-            default:
+                default:
                 System.out.println("Opção inválida.");
                 break;
         }
@@ -242,11 +246,11 @@ public class Screen {
             case 2:
                 menuRemoveVeiculo();
                 break;
-            default:
+                default:
                 System.out.println("Opção inválida.");
                 break;
         }
-    sc.close();
+        sc.close();
     }
 
     public static void menuVendedor(String login){
@@ -269,7 +273,7 @@ public class Screen {
                 System.out.println("Opção inválida.");
                 break;
         }
-    sc.close();
+        sc.close();
     }
 
     

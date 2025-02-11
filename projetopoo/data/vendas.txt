@@ -1,0 +1,9 @@
+CLIENTE: NOME:cururu, ENDERECO: beira do rio, CONTATO:111111111 | CARRO: Marca: cu Modelo: kkkk Ano: 1  Preco: 1.0 Cor:red KM: 0.0
+ | CARRO: Marca: dfg Modelo: dfg Ano: 1  Preco: 1.0 Cor:red KM: 0.0
+ | CARRO: Marca: Oi Modelo: Ola Ano: 123 Preco: 123333.0 Cor:opa KM: 0.0 Qtd: 1
+CLIENTE: Nome:jadiel Cpf: 123 | CARRO: Marca: Oi Modelo: Ola Ano: 123 Preco: 123333.0 Cor:opa KM: 0.0 Qtd: 1
+ Nome:teiu Cpf: 22, Endereco: etiu, Contato:455 | CARRO: Marca: jadiel Modelo: xuxu Ano: 1  Preco: 1.0 Cor:red KM: 0.0
+ Nome:teiu Cpf: 22, Endereco: etiu, Contato:455 | CARRO: Marca: dfg Modelo: dfg Ano: 1  Preco: 1.0 Cor:red KM: 0.0
+ Nome:iuuuuuu Cpf: 3333, Endereco: tyui, Contato:9980 | CARRO: Marca: jadiel Modelo: rapidao Ano: 1  Preco: 1.0 Cor:red KM: 0.0
+ Cliente:ggg Cpf: 444 | CARRO: Marca: Oi Modelo: Ola Ano: 123 Preco: 123333.0 Cor:opa KM: 0.0 Qtd: 1
+ NOME:cururu | CARRO: Marca: Oi Modelo: Ola Ano: 123 Preco: 123333.0 Cor:opa KM: 0.0 Qtd: 1

@@ -1,10 +1,7 @@
 Marca: jogagogo Modelo: maestral Ano: 1231 Preco: 222323.0 Cor:joooj KM: 2.0
-<<<<<<< HEAD
-Marca: julia Modelo: louquinha Ano: 1 Preco: 1.0 Cor:cor KM: 1.0
-Marca: julia Modelo: louquinha Ano: 1 Preco: 1.0 Cor:cor KM: 1.0
-=======
 Marca: 4 Modelo: 4 Ano: 1 Preco: 1.0 Cor:cor KM: 1.0
 Marca: 4 Modelo: 4 Ano: 1 Preco: 1.0 Cor:cor KM: 1.0
 Marca: honda Modelo: xisjosta Ano: 1 Preco: 1.0 Cor:cor KM: 1.0
 Marca: honda Modelo: xisjosta Ano: 1 Preco: 1.0 Cor:cor KM: 1.0
->>>>>>> e1cfdb074494944b6541a6eb89ece5b39c2bdf66
+Marca: moto Modelo: boa Ano: 1 Preco: 1.0 Cor:cor KM: 1.0
+Marca: moto Modelo: boa Ano: 1 Preco: 1.0 Cor:cor KM: 1.0
