@@ -8,6 +8,8 @@ batata
 batatarapidao
 beleza
 beleza
+celta
+celta
 dfg
 dfg
 jureg
@@ -21,5 +23,7 @@ rapidao
 rapidao
 sigmelson
 toddynho
+toro
+toro
 xuxu
 xuxu

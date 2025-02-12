@@ -181,7 +181,7 @@ public class Screen {
         
         switch (userOp) {
             case 1:
-                System.out.print("O que deseja fazer:\n [1] Cadastrar novo usuário.\n [2] Remover usuário.");
+                System.out.print("O que deseja fazer:\n [1] Cadastrar novo usuário.\n [2] Remover usuário.\n [3] Exibir usuários.");
                 int input1 = sc.nextInt();
                 switch (input1) {
                     case 1:
@@ -190,13 +190,16 @@ public class Screen {
                     case 2:
                         menuRemoverUsuario();
                         break;
+                    case 3:
+                        ControleUsuarios.exibirUsuarios();
+                        break;
                     default:
                         System.out.println("Opção inválida.");
                         break;
                 }
                 break;
             case 2:
-                System.out.print("O que deseja fazer:\n [1] Cadastrar novo veiculo.\n [2] Remover veíuculo."); // Realmente é necessário o remover veículo? A remoção não é feita automaticamente após uma venda? 
+                System.out.print("O que deseja fazer:\n [1] Cadastrar novo veiculo.\n [2] Remover veíuculo.\n [3] Consultar veículos."); // Realmente é necessário o remover veículo? A remoção não é feita automaticamente após uma venda? 
                 int input2 = sc.nextInt();
                 switch (input2) {
                     case 1:
@@ -204,6 +207,9 @@ public class Screen {
                         break;
                     case 2:
                         menuRemoveVeiculo();
+                        break;
+                    case 3:
+                        menuConsultaVeiculo();
                         break;
                     default:
                         System.out.println("Opção inválida.");

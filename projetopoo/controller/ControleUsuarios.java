@@ -71,6 +71,7 @@ public class ControleUsuarios {
             e.printStackTrace();
         }
 
+        nomeUser = nomeUser.trim();
         List<String> listaDeLogins = new ArrayList<>();
         List<String> listaFinalLogins = new ArrayList<>();
 
@@ -84,7 +85,7 @@ public class ControleUsuarios {
 
 
         for(String user : listaDeLogins){
-            if(!(user.contains(nomeUser))){
+            if(!(user.equals(nomeUser))){
                 listaFinalLogins.add(user);
             }
             
