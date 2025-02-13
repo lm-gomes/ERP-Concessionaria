@@ -3,6 +3,9 @@ package controller;
 
 import java.io.*;
 import java.util.*;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 import modelos.Carro;
 import modelos.Moto;
 
@@ -15,16 +18,16 @@ public class ControleEstoque{
                 listaDeModelos.add(br.readLine());
             }
             Collections.sort(listaDeModelos);
-            for(String modelo : listaDeModelos){
+            /*for(String modelo : listaDeModelos){
                 System.out.println(modelo);
-            }
+            }*/
             
         }
         catch(FileNotFoundException e){
             System.out.println(e.getMessage());
         }
         catch(Exception e){
-            System.out.println("Deu ruim paizão");
+            System.out.println("Deu ruim felpinho desculpa");
         }
 
         try(BufferedWriter bwm = new BufferedWriter(new FileWriter(nomeArquivo))){
@@ -74,10 +77,11 @@ public class ControleEstoque{
                 bw.newLine();
                 bwm.write(car.modelo);
                 bwm.newLine();
-                
             }
+            logEstoque("[LOG-SISTEMA]Veiculo cadastrado: Carro - Modelo: " + car.modelo);
+            
 
-        } catch (IOException e) {
+        } catch (IOException e){
             e.printStackTrace();
         }
         ordernarModelo("data/m_carros.txt");
@@ -92,7 +96,9 @@ public class ControleEstoque{
                 bwm.write(moto.modelo);
                 bwm.newLine();
             }
-
+            logEstoque("[LOG-SISTEMA]Veiculo cadastrado: Moto - Modelo: " + moto.modelo);
+            
+            ordernarModelo("data/m_motos.txt");
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -101,6 +107,7 @@ public class ControleEstoque{
 
 
     public static void consultarEstoque(String nomeArquivo){
+        System.out.println("---------------------------------------------");
         verificarEstoque("data/m_carros.txt");
 
         try(BufferedReader br = new BufferedReader(new FileReader(nomeArquivo));){
@@ -112,15 +119,108 @@ public class ControleEstoque{
             }
         }
         catch(FileNotFoundException e){
-            e.printStackTrace();
+            System.out.println("caiu aqui!!!");
         }
         catch(IOException e){
             e.printStackTrace();
         }
     }
 
-    public static void removerVeiculo(int index){
-        
+    public static void removerVeiculo(int index, String nomeArquivo, String arquivoModelo){
+        List<String> listaDeVeiculos = new ArrayList<>();
+        List<String> listaDeModelos = new ArrayList<>();
+
+        String logVeiculoRemovido = "";
+
+        try(BufferedReader br = new BufferedReader(new FileReader(nomeArquivo)); BufferedReader brm = new BufferedReader(new FileReader(arquivoModelo))){    
+            for(int i = 1; br.ready(); i++){
+                String linha =  br.readLine();
+                if(i != index){
+                    listaDeVeiculos.add(linha);
+                }
+                else{
+                    logVeiculoRemovido = linha;
+                }
+            }  
+
+            boolean modeloEncontrado = false;
+            String linha = "";
+            String logLinha = "";
+            while(brm.ready()){
+                linha = brm.readLine();
+                if(!modeloEncontrado){
+                    if(!logVeiculoRemovido.contains(linha)){
+                       listaDeModelos.add(linha);
+                    }
+                    else{
+                        modeloEncontrado = true;
+                        logLinha = linha;
+                    }
+                }
+                else{
+                    listaDeModelos.add(linha);
+                }
+            }
+            if(!modeloEncontrado){
+                System.out.println("Nao foi possivel encontrar um veiculo no indice especificado...");
+            }
+            else{
+                System.out.println("- - Veiculo removido com sucesso! - -");
+                logEstoque("[LOG-SISTEMA]Veiculo removido: Modelo - " + logLinha);
+            }
+            
+        }
+        catch(Exception e){
+            e.printStackTrace();
+
+        }
+
+        try(BufferedWriter bw = new BufferedWriter(new FileWriter(nomeArquivo)); BufferedWriter bwm = new BufferedWriter(new FileWriter(arquivoModelo))){
+            for(String veiculo: listaDeVeiculos){
+                bw.write(veiculo);
+                bw.newLine();
+            }
+            String logModelo;
+            for(String modelo: listaDeModelos){
+                bwm.write(modelo);
+                bwm.newLine();
+            }
+            
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+
+
     }
 
+    public static void logEstoque(String mensagem){
+        LocalDateTime data = LocalDateTime.now();
+        DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
+        String logData = data.format(formato);
+        System.out.println(mensagem + " " + logData);
+        
+        try(BufferedWriter bw = new BufferedWriter(new FileWriter("data/logEstoque.txt", true))){
+                bw.write(mensagem + " " + logData);
+                bw.newLine();
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    public static void consultarLog(){
+        try(BufferedReader br = new BufferedReader(new FileReader("data/logEstoque.txt"));){
+            System.out.println("---------------------------------------------");
+            while(br.ready()){
+                System.out.println(br.readLine());
+            }
+        }
+        catch(FileNotFoundException e){
+            e.printStackTrace();
+        }
+        catch(IOException e){
+            e.printStackTrace();
+        }
+    }
 }
