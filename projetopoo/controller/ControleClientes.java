@@ -7,7 +7,7 @@ import java.io.*;
 public class ControleClientes{
     public static void cadastrarClientes(Cliente c){
         try(BufferedWriter bw = new BufferedWriter(new FileWriter("data/clientes.txt", true))){
-            bw.write("Nome:" + c.getNome() + " Cpf: " + c.getCpf() + ", Endereco: " + c.getEndereco() + ", Contato:" + c.getContato()); 
+            bw.write("CLIENTE: " + c.getNome() + " CPF: " + c.getCpf() + " ENDERECO: " + c.getEndereco() + " CONTATO: " + c.getContato());
             bw.newLine();
         }
         catch(Exception e){
@@ -15,7 +15,7 @@ public class ControleClientes{
         }
 
         try(BufferedWriter bw = new BufferedWriter(new FileWriter("data/db_clientes.txt", true))){
-            bw.write("Cliente:" + c.getNome() + " Cpf: " + c.getCpf()); 
+            bw.write("CLIENTE: " + c.getNome() + " CPF: " + c.getCpf()); 
             bw.newLine();
         }
         catch(Exception e){
@@ -37,8 +37,8 @@ public class ControleClientes{
     }
 
     public static void alterarDadosCliente(int index, String nome, int cpf, String end, int num){
-        String dados = "Nome: " + nome + " Cpf: " + cpf + " Endereco: " + end + " Contato: " + num;
-        String db_dados = "Nome: " + nome + " Cpf: " + cpf;
+        String dados = "CLIENTE: " + nome + " CPF: " + cpf + " ENDERECO: " + end + " CONTATO: " + num;
+        String db_dados = "CLIENTE: " + nome + " CPF: " + cpf;
 
         List<String> linhas = new ArrayList<>();
 

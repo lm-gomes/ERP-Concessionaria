@@ -165,7 +165,7 @@ public class ControleEstoque{
                     listaDeModelos.add(linha);
                 }
             }
-            logEstoque("[LOG-SISTEMA]Veículo removido: Modelo - " + linha);
+            logEstoque("[LOG-SISTEMA] Veículo removido: Modelo - " + linha);
         }
         catch(Exception e){
             e.printStackTrace();

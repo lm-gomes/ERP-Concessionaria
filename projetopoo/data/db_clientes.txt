@@ -1,15 +1,17 @@
-NOME: JAdie�
-NOME: Jadiel
-NOME: Jadiel
-NOME: Jadiel
-NOME: JAdiel 
-NOME: Jadiel
-NOME:Jadiel
-Nome: cururu Cpf: 3456
-NOME:ioioioio
-Nome: lucas Cpf: 1234567
-Nome: rato assado Cpf: 1234567
-Nome: jadiissss Cpf: 123
-Nome:iuuuuuu Cpf: 3333
-Nome: uiiii Cpf: 6666
-Cliente:cururu preto Cpf: 1234
+CLIENTE: raimundo CPF: 1234
+CLIENTE: Jadiel CPF: 0778
+CLIENTE: xuxa CPF: 5436
+CLIENTE: arnaldinho CPF: 7652
+CLIENTE: phelps brasilia CPF: 1042
+CLIENTE: gosto de bosta CPF: 44455
+CLIENTE: biloto da rodoviaria CPF: 111232
+CLIENTE: cururu CPF: 3456
+CLIENTE: ioioioio CPF: 55976
+CLIENTE: lucas CPF: 1234567
+CLIENTE: rato assado CPF: 1234567
+CLIENTE: jadiissss CPF: 123
+CLIENTE: iuuuuuu CPF: 3333
+CLIENTE: uiiii CPF: 6666
+CLIENTE: cururu preto CPF: 1234
+CLIENTE: gabriel CPF: 3478
+CLIENTE: juvenildo CPF: 666

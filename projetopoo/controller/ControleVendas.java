@@ -59,7 +59,7 @@ public class ControleVendas{
             e.printStackTrace();
         }
 
-        try(BufferedWriter bw = new BufferedWriter(new FileWriter("data/vendas.txt", true))){
+        try(BufferedWriter bw = new BufferedWriter(new FileWriter("data/logvendas.txt", true))){
             bw.write(padrao + info + " (" + horaFormatada + ")");
             bw.newLine();
 

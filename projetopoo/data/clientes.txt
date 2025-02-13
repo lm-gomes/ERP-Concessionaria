@@ -1,15 +1,17 @@
-NOME: JAdie� ENDERECO:  fgdfgdfg CONTATO: 4644684
-NOME: Jadiel ENDERECO:  RuaNaoSei CONTATO: 5465454
-NOME: Jadiel ENDERECO:  Rua nao sei CONTATO: 54668748
-NOME: Jadiel ENDERECO:  Rua RAimundo da barbearia CONTATO: 5464546
-NOME: JAdiel ENDERECO:  gdgdfgdfg CONTATO: 74546
-NOME: Jadiel ENDERECO:  Rua do Raimundo barberinho CONTATO: 4654687
-NOME:Jadiel, ENDERECO: manel ri, CONTATO:987493845
-Nome: cururu Cpf: 3456 Endereco: beira da lagoa Contato: 3131
-NOME:ioioioio, ENDERECO: sitio, CONTATO:45565632
-Nome: lucas Cpf: 1234567 Endereco: rua joaninha perdigao Telefone: 12333333
-Nome: rato assado Cpf: 1234567 Endereco: ru ada jujus Telefone: 57468
-Nome: jadiissss Cpf: 123 Endereco: casa Contato: 3243221
-Nome:iuuuuuu Cpf: 3333, Endereco: tyui, Contato:9980
-Nome: uiiii Cpf: 6666 Endereco: ccccc Contato: 444
-Nome:cururu preto Cpf: 1234, Endereco: casa grazadeus, Contato:3434
+CLIENTE: raimundo CPF: 1234 ENDERECO: rua CONTATO: 121233234
+CLIENTE: Jadiel CPF: 0778 ENDERECO: barbeiro CONTATO: 6784355
+CLIENTE: xuxa CPF: 5436 ENDERECO: coronel jilozinho CONTATO: 4456355
+CLIENTE: arnaldinho CPF: 7652 ENDERECO: tabajara CONTATO: 4355465
+CLIENTE: phelps brasilia CPF: 1042 ENDERECO: ibiapina depressao CONTATO: 43546455
+CLIENTE: gosto de bosta CPF: 44455 ENDERECO: chico sulino CONTATO: 43554564
+CLIENTE: biloto da rodoviaria CPF: 111232 ENDERECO: sebastiao sem cueca CONTATO: 4355645645
+CLIENTE: cururu CPF: 3456 ENDERECO: hiroshima CONTATO: 4454
+CLIENTE: ioioioio CPF: 55976 ENDERECO: nagasaki CONTATO: 4897897
+CLIENTE: lucas CPF: 1234567 ENDERECO: tordesilhas CONTATO: 445655
+CLIENTE: rato assado CPF: 1234567 ENDERECO: jaburu CONTATO: 3335566
+CLIENTE: jadiissss CPF: 123 ENDERECO: boi morto CONTATO: 4777755
+CLIENTE: iuuuuuu CPF: 3333 ENDERECO: caza grazadeus CONTATO: 45655
+CLIENTE: uiiii CPF: 6666 ENDERECO: rua joaninha perdigao CONTATO: 45546
+CLIENTE: cururu preto CPF: 1234 ENDERECO: dobrando depois dali CONTATO: 355
+CLIENTE: gabriel CPF: 3478 ENDERECO: prefiro nao informar CONTATO: 435
+CLIENTE: juvenildo CPF: 666 ENDERECO: so recebendo pix CONTATO: 43535

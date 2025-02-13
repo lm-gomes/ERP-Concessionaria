@@ -120,15 +120,15 @@ public class Screen {
     public static void menuCadastroUsuario(){
         try{
             Scanner sc = new Scanner(System.in);
-            System.out.println("Insira o tipo de usuário:\n [1] Gerente\n [2] Estoquista\n [3] Vendedor\n>> ");
+            System.out.println("Insira o tipo de usuário:\n [1] Gerente\n [2] Estoquista\n [3] Vendedor\n>>");
             int userInput = sc.nextInt();
             sc.nextLine();
-            System.out.println("Digite o login do usuário: ");
+            System.out.print("Digite o login do usuário: ");
             String login = sc.nextLine();
             login = login.toLowerCase();
             int senha = 0; 
             if(ControleUsuarios.validarLogin(login)){
-                System.out.println("Digite a senha do usuário: ");
+                System.out.print("Digite a senha do usuário: ");
                 senha = sc.nextInt();
                 sc.nextLine();
             }
@@ -161,7 +161,7 @@ public class Screen {
     }
 
     public static void menuRemoverUsuario(){
-        System.out.println("Digite o login do usuário que você deseja remover: \n >> ");
+        System.out.print("Digite o login do usuário que você deseja remover: ");
         
         try{
            Scanner sc = new Scanner(System.in);
@@ -175,13 +175,13 @@ public class Screen {
 
     public static void menuGerente(String login){
         System.out.println("Bem - vindo, " + login);
-        System.out.print("Escolha uma operação:\n [1] Operar usuários.\n [2] Operar estoque.\n [3] Fazer venda.\n  >> ");
+        System.out.print("Escolha uma operação:\n [1] Operar usuários.\n [2] Operar estoque.\n [3] Fazer venda.\n>> ");
         Scanner sc = new Scanner(System.in);
         int userOp = sc.nextInt();
         
         switch (userOp) {
             case 1:
-                System.out.print("O que deseja fazer:\n [1] Cadastrar novo usuário.\n [2] Remover usuário.\n [3] Exibir usuários.");
+                System.out.print("O que deseja fazer:\n [1] Cadastrar novo usuário.\n [2] Remover usuário.\n [3] Exibir usuários.\n>>");
                 int input1 = sc.nextInt();
                 switch (input1) {
                     case 1:
@@ -199,7 +199,7 @@ public class Screen {
                 }
                 break;
             case 2:
-                System.out.print("O que deseja fazer:\n [1] Cadastrar novo veiculo.\n [2] Remover veíuculo.\n [3] Consultar veículos."); // Realmente é necessário o remover veículo? A remoção não é feita automaticamente após uma venda? 
+                System.out.print("O que deseja fazer:\n [1] Cadastrar novo veiculo.\n [2] Remover veíuculo.\n [3] Consultar veículos.\n>>");
                 int input2 = sc.nextInt();
                 switch (input2) {
                     case 1:
@@ -249,7 +249,7 @@ public class Screen {
 
     public static void menuEstoquista(String login){
         System.out.println("Bem - vindo, " + login);
-        System.out.print("O que deseja fazer:\n [1] Cadastrar novo veiculo.\n [2] Remover veíuculo.");
+        System.out.print("O que deseja fazer:\n [1] Cadastrar novo veiculo.\n [2] Remover veíuculo.\n>>");
         Scanner sc = new Scanner(System.in);
         int userOp = sc.nextInt();
         
@@ -313,9 +313,9 @@ public class Screen {
 
                 ControleVendas.relatorioDeVendas(id, indice, "data/carros.txt", "data/m_carros.txt");
 
-                ControleEstoque.removerVeiculo(indice, "data/carros.txt", "data/m_carros.txt");
+                System.out.println("Venda realizada com sucesso!");
 
-                System.out.println("Carro vendido!");
+                ControleEstoque.removerVeiculo(indice, "data/carros.txt", "data/m_carros.txt");
             }
             else{
                 ControleVendas.exibirVeiculo("data/motos.txt");
@@ -324,9 +324,9 @@ public class Screen {
 
                 ControleVendas.relatorioDeVendas(id, indice, "data/motos.txt", "data/m_motos.txt");
 
-                ControleEstoque.removerVeiculo(indice, "data/motos.txt", "data/m_motos");
+                System.out.println("Venda realizada com sucesso!");
 
-                System.out.println("Moto vendida!");
+                ControleEstoque.removerVeiculo(indice, "data/motos.txt", "data/m_motos.txt");
             }
         }
         catch(Exception e){
@@ -337,17 +337,17 @@ public class Screen {
 
     public static void menuCadastrarCliente(){
         try(Scanner scan = new Scanner(System.in)){
-            System.out.println("NOME: ");
+            System.out.print("NOME: ");
             String clienteNome = scan.nextLine();
 
-            System.out.println("CPF: ");
+            System.out.print("CPF: ");
             int clienteCpf = scan.nextInt();
             scan.nextLine();
 
-            System.out.println("ENDERECO: ");
+            System.out.print("ENDERECO: ");
             String clienteEndereco = scan.nextLine();
 
-            System.out.println("CONTATO: ");
+            System.out.print("CONTATO: ");
             int clienteContato = scan.nextInt();
 
             Cliente cliente = new Cliente(clienteNome, clienteCpf, clienteEndereco, clienteContato);
