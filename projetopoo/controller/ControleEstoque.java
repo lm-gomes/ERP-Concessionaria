@@ -196,7 +196,7 @@ public class ControleEstoque{
         System.out.println(mensagem + " " + logData);
         
         try(BufferedWriter bw = new BufferedWriter(new FileWriter("data/logEstoque.txt"))){
-                bw.write(mensagem + " " + logData);
+                bw.write(mensagem + " " + "(" + logData + ")");
                 bw.newLine();
         }
         catch(Exception e){

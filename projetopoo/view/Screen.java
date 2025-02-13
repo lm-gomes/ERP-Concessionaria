@@ -311,9 +311,9 @@ public class Screen {
                 System.out.print("Digite o indice do carro para a venda\n>>");
                 int indice = scan.nextInt();
 
-                // ControleEstoque.removerVeiculo(indice, "data/carros.txt");
+                ControleVendas.relatorioDeVendas(id, indice, "data/carros.txt", "data/m_carros.txt");
 
-                ControleVendas.relatorioDeVendas(id, indice, "data/carros.txt");
+                ControleEstoque.removerVeiculo(indice, "data/carros.txt", "data/m_carros.txt");
 
                 System.out.println("Carro vendido!");
             }
@@ -321,10 +321,10 @@ public class Screen {
                 ControleVendas.exibirVeiculo("data/motos.txt");
                 System.out.print("Digite o indice da moto para a venda\n>>");
                 int indice = scan.nextInt();
-                
-                // ControleEstoque.removerVeiculo(indice, "data/moto.txt");
 
-                ControleVendas.relatorioDeVendas(id, indice, "data/moto.txt");
+                ControleVendas.relatorioDeVendas(id, indice, "data/motos.txt", "data/m_motos.txt");
+
+                ControleEstoque.removerVeiculo(indice, "data/motos.txt", "data/m_motos");
 
                 System.out.println("Moto vendida!");
             }

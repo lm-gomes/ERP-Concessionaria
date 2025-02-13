@@ -1,1 +1,1 @@
-[LOG-SISTEMA]Veículo cadastrado: Modelo - celta 11/02/2025 21:15:09
+[LOG-SISTEMA]Veículo removido: Modelo - astolfo (12/02/2025 21:14:09)
