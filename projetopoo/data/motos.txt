@@ -1,7 +1,14 @@
 Marca: jogagogo Modelo: maestral Ano: 1231 Preco: 222323.0 Cor:joooj KM: 2.0
 Marca: 4 Modelo: 4 Ano: 1 Preco: 1.0 Cor:cor KM: 1.0
-Marca: 4 Modelo: 4 Ano: 1 Preco: 1.0 Cor:cor KM: 1.0
 Marca: honda Modelo: xisjosta Ano: 1 Preco: 1.0 Cor:cor KM: 1.0
 Marca: honda Modelo: xisjosta Ano: 1 Preco: 1.0 Cor:cor KM: 1.0
 Marca: moto Modelo: boa Ano: 1 Preco: 1.0 Cor:cor KM: 1.0
 Marca: moto Modelo: boa Ano: 1 Preco: 1.0 Cor:cor KM: 1.0
+Marca: honda Modelo: titan Ano: 1 Preco: 1.0 Cor:cor KM: 1.0
+Marca: honda Modelo: titan Ano: 1 Preco: 1.0 Cor:cor KM: 1.0
+Marca: honda Modelo: xisjostinha Ano: 1 Preco: 1.0 Cor:cor KM: 1.0
+Marca: honda Modelo: xisjostinha Ano: 1 Preco: 1.0 Cor:cor KM: 1.0
+Marca: honda Modelo: maestra Ano: 1 Preco: 1.0 Cor:cor KM: 1.0
+Marca: honda Modelo: maestra Ano: 1 Preco: 1.0 Cor:cor KM: 1.0
+Marca: kiko Modelo: chaves Ano: 1 Preco: 1.0 Cor:cor KM: 1.0
+Marca: kiko Modelo: chaves Ano: 1 Preco: 1.0 Cor:cor KM: 1.0

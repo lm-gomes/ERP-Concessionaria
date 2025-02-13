@@ -18,16 +18,16 @@ public class ControleEstoque{
                 listaDeModelos.add(br.readLine());
             }
             Collections.sort(listaDeModelos);
-            for(String modelo : listaDeModelos){
+            /*for(String modelo : listaDeModelos){
                 System.out.println(modelo);
-            }
+            }*/
             
         }
         catch(FileNotFoundException e){
             System.out.println(e.getMessage());
         }
         catch(Exception e){
-            System.out.println("Deu ruim paizão");
+            System.out.println("Deu ruim felpinho desculpa");
         }
 
         try(BufferedWriter bwm = new BufferedWriter(new FileWriter(nomeArquivo))){
@@ -78,9 +78,10 @@ public class ControleEstoque{
                 bwm.write(car.modelo);
                 bwm.newLine();
             }
-            logEstoque("[LOG-SISTEMA]Veículo cadastrado: Modelo - " + car.modelo);
+            logEstoque("[LOG-SISTEMA]Veiculo cadastrado: Carro - Modelo: " + car.modelo);
+            
 
-        } catch (IOException e) {
+        } catch (IOException e){
             e.printStackTrace();
         }
         ordernarModelo("data/m_carros.txt");
@@ -95,7 +96,9 @@ public class ControleEstoque{
                 bwm.write(moto.modelo);
                 bwm.newLine();
             }
-
+            logEstoque("[LOG-SISTEMA]Veiculo cadastrado: Moto - Modelo: " + moto.modelo);
+            
+            ordernarModelo("data/m_motos.txt");
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -116,7 +119,7 @@ public class ControleEstoque{
             }
         }
         catch(FileNotFoundException e){
-            e.printStackTrace();
+            System.out.println("caiu aqui!!!");
         }
         catch(IOException e){
             e.printStackTrace();
@@ -142,6 +145,7 @@ public class ControleEstoque{
 
             boolean modeloEncontrado = false;
             String linha = "";
+            String logLinha = "";
             while(brm.ready()){
                 linha = brm.readLine();
                 if(!modeloEncontrado){
@@ -150,13 +154,21 @@ public class ControleEstoque{
                     }
                     else{
                         modeloEncontrado = true;
+                        logLinha = linha;
                     }
                 }
                 else{
                     listaDeModelos.add(linha);
                 }
             }
-            logEstoque("[LOG-SISTEMA]Veículo removido: Modelo - " + linha);
+            if(!modeloEncontrado){
+                System.out.println("Nao foi possivel encontrar um veiculo no indice especificado...");
+            }
+            else{
+                System.out.println("- - Veiculo removido com sucesso! - -");
+                logEstoque("[LOG-SISTEMA]Veiculo removido: Modelo - " + logLinha);
+            }
+            
         }
         catch(Exception e){
             e.printStackTrace();
@@ -188,7 +200,7 @@ public class ControleEstoque{
         String logData = data.format(formato);
         System.out.println(mensagem + " " + logData);
         
-        try(BufferedWriter bw = new BufferedWriter(new FileWriter("data/logEstoque.txt"))){
+        try(BufferedWriter bw = new BufferedWriter(new FileWriter("data/logEstoque.txt", true))){
                 bw.write(mensagem + " " + logData);
                 bw.newLine();
         }
