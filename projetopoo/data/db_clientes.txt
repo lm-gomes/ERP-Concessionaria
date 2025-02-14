@@ -9,9 +9,9 @@ CLIENTE: cururu CPF: 3456
 CLIENTE: ioioioio CPF: 55976
 CLIENTE: lucas CPF: 1234567
 CLIENTE: rato assado CPF: 1234567
-CLIENTE: jadiissss CPF: 123
+CLIENTE: marciano CPF: 43
 CLIENTE: iuuuuuu CPF: 3333
 CLIENTE: uiiii CPF: 6666
 CLIENTE: cururu preto CPF: 1234
-CLIENTE: gabriel CPF: 3478
 CLIENTE: juvenildo CPF: 666
+CLIENTE: sapateiro CPF: 4545

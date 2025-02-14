@@ -45,7 +45,10 @@ public class ControleUsuarios {
     public static void removerUsuario(String nomeUser){
         List<String> listaDeUsuarios = new ArrayList<>();
         List<String> listaFinal = new ArrayList<>();
+
         nomeUser = nomeUser + " ";
+        boolean usuarioEncontrado = false;
+
         try(BufferedReader br = new BufferedReader(new FileReader("data/users.txt"))){
             while (br.ready()) {
                 listaDeUsuarios.add(br.readLine());
@@ -58,6 +61,9 @@ public class ControleUsuarios {
         for(String user : listaDeUsuarios){
             if(!(user.contains(nomeUser))){
                 listaFinal.add(user);
+            }
+            else{
+                usuarioEncontrado = true;
             }
             
         }
@@ -88,6 +94,7 @@ public class ControleUsuarios {
             if(!(user.equals(nomeUser))){
                 listaFinalLogins.add(user);
             }
+           
             
         }
 
@@ -98,6 +105,12 @@ public class ControleUsuarios {
             }
         } catch (Exception e) {
             e.printStackTrace();
+        }
+        if(!usuarioEncontrado){
+            System.out.println("Nao foi possivel encontrar o usuario especificado...");
+        }
+        else{
+            System.out.println("- - Usuario removido com sucesso! - -");
         }
     }
 
@@ -115,6 +128,7 @@ public class ControleUsuarios {
             for (String user : listaDeUsuarios) {
                 if(user.contains(login) && user.contains(s)){
                     System.out.println("Usuário autorizado.");
+                    System.out.println("Bem - vindo, " + login);
                     foundLine = true;
                     break;
                 }else{

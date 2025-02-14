@@ -1,2 +1,5 @@
-Marca: jose Modelo: arnaldo Ano: 1222  Preco: 999.0 Cor:jojo KM: 4.0
-Marca: jose Modelo: astolfo Ano: 1222  Preco: 999.0 Cor:jojo KM: 4.0
+Marca: Fiat Modelo: Palio Ano: 1  Preco: 1.0 Cor:red KM: 0.0
+Marca: Renault Modelo: Brabo Ano: 1  Preco: 1.0 Cor:red KM: 0.0
+Marca: JoaoGomes Modelo: Ursula Ano: 1  Preco: 1.0 Cor:red KM: 0.0
+Marca: alou Modelo: 123 Ano: 1  Preco: 1.0 Cor:red KM: 0.0
+Marca: honda Modelo: maestro Ano: 2027  Preco: 20000.0 Cor:azul KM: 1022.0
