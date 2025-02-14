@@ -307,7 +307,7 @@ public class Screen {
                 }
                 break;
             case 3:
-                System.out.print("O que deseja fazer:\n [1] Vender veículo\n [2] Cadastrar cliente.\n [3] Alterar dados do cliente.\n [4] Remover cliente. \n [5] Exibir clientes.\n >>");
+                System.out.print("O que deseja fazer:\n [1] Vender veículo\n [2] Cadastrar cliente.\n [3] Alterar dados do cliente.\n [4] Remover cliente. \n [5] Exibir clientes.\n [6] sair.\n>>");
                 int input3 = sc.nextInt();
                 sc.nextLine();
                 switch (input3) {
@@ -325,6 +325,10 @@ public class Screen {
                         break;
                     case 5:
                         menuExibirClientes();
+                        break;
+                    case 6:
+                        isRunning = false;
+                        System.out.println("Programa encerrado.");
                         break;
                     default: 
                         System.out.println("Opção inválida.");
