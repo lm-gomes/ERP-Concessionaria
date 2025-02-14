@@ -4,6 +4,3 @@ Marca: alou Modelo: 123 Ano: 1  Preco: 1.0 Cor:red KM: 0.0
 Marca: honda Modelo: maestro Ano: 2027  Preco: 20000.0 Cor:azul KM: 1022.0
 Marca: felpito Modelo: flpolos Ano: 2020  Preco: 2099.0 Cor:azul KM: 0.0
 Marca: felpito Modelo: flpolos Ano: 2020  Preco: 2099.0 Cor:azul KM: 0.0
-Marca: felpito Modelo: flpolos Ano: 2020  Preco: 2099.0 Cor:azul KM: 0.0
-Marca: po Modelo: Felpolos Ano: 2020  Preco: 122222.0 Cor:azul KM: 0.0
-Marca: po Modelo: Felpolos Ano: 2020  Preco: 122222.0 Cor:azul KM: 0.0

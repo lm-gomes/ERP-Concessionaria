@@ -194,7 +194,6 @@ public class ControleEstoque{
         LocalDateTime data = LocalDateTime.now();
         DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
         String logData = data.format(formato);
-        System.out.println(mensagem + " " + logData);
         
         try(BufferedWriter bw = new BufferedWriter(new FileWriter("data/logEstoque.txt", true))){
                 bw.write(mensagem + " " + logData);

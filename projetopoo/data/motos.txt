@@ -13,6 +13,5 @@ Marca: kiko Modelo: chaves Ano: 1 Preco: 1.0 Cor:cor KM: 1.0
 Marca: honda Modelo: aesthetic Ano: 2090 Preco: 2000.0 Cor:azul KM: 0.0
 Marca: honda Modelo: aesthetic Ano: 2090 Preco: 2000.0 Cor:azul KM: 0.0
 Marca: honda Modelo: aesthetic Ano: 2090 Preco: 2000.0 Cor:azul KM: 0.0
-Marca: honda Modelo: aesthetic Ano: 2090 Preco: 2000.0 Cor:azul KM: 0.0
 Marca: hjhjhj Modelo: hognight Ano: 2020 Preco: 21.0 Cor:2 KM: 2.0
 Marca: hjhjhj Modelo: hognight Ano: 2020 Preco: 21.0 Cor:2 KM: 2.0

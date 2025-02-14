@@ -48,32 +48,56 @@ public class Screen {
             int tipoVeiculo = sc.nextInt();
             sc.nextLine();
             limparTela();
-
+            
+            if(tipoVeiculo <= 0 || tipoVeiculo > 2){
+                throw new IllegalArgumentException("[ERRO] Indice invalido!");
+            }
             System.out.print("Marca:");
             String marcaVeiculo = sc.nextLine();
             System.out.print("Modelo: ");
             String modeloVeiculo = sc.nextLine();
+
             System.out.print("Ano: ");
             int anoVeiculo = sc.nextInt();
+
+            if(anoVeiculo < 1886 || anoVeiculo > 2025){
+                throw new IllegalArgumentException("[ERRO] Ano inválido!");
+            }
             System.out.print("Preco: ");
             double precoVeiculo = sc.nextDouble();
             sc.nextLine();
+            if(precoVeiculo < 1000){
+                throw new IllegalArgumentException("[ERRO] Quer dar logo não? (Preço abaixo do padrão)");
+            }
             System.out.print("Cor: ");
             String corVeiculo = sc.nextLine();
+
             System.out.print("KM: ");
             double kmVeiculo = sc.nextDouble();
+            if(kmVeiculo < 0){
+                throw new IllegalArgumentException("[ERRO] Quilometragem invalida!");
+            }
             
             if(tipoVeiculo == 1){
                 System.out.println("Portas: ");
                 int portasVeiculo = sc.nextInt();
+                if(portasVeiculo <=0 || portasVeiculo == 1 || portasVeiculo > 4){
+                    throw new IllegalArgumentException("[ERRO] Quantidade de portas invalida!");
+                }
                 System.out.println("Quantidade: ");
                 int qtdVeiculo = sc.nextInt();
+                if(qtdVeiculo <= 0){
+                    throw new IllegalArgumentException("[ERRO] Quantidade de veiculos invalida!");
+                }
                 Carro carro = new Carro(qtdVeiculo, marcaVeiculo, modeloVeiculo, anoVeiculo, precoVeiculo, corVeiculo, kmVeiculo, portasVeiculo);
                 ControleEstoque.cadastrarVeiculo(carro);
             }
             else{
                 System.out.println("Quantidade: ");
                 int qtdVeiculo = sc.nextInt();
+                if(qtdVeiculo <= 0){
+                    throw new IllegalArgumentException("[ERRO] Quantidade de veiculos invalida!");
+                }
                 Moto moto = new Moto(qtdVeiculo, marcaVeiculo, modeloVeiculo, anoVeiculo, precoVeiculo, corVeiculo, kmVeiculo);
                 ControleEstoque.cadastrarVeiculo(moto);
             }
@@ -83,10 +107,18 @@ public class Screen {
             esperar(2500);
 
         }
+
+        catch(IllegalArgumentException e){
+            System.out.println(e.getMessage());
+        }
+
         catch(Exception e){
             System.out.println("Erro: Entrada invalida!");
         }
 
+        finally{
+            esperar(2500);
+        }
     }
 
     public static void menuConsultaVeiculo(){
@@ -94,6 +126,9 @@ public class Screen {
             System.out.print("[1]Carro\n[2]Moto\nDigite o tipo de veículo: ");
             int userInput = sc.nextInt();
             sc.nextLine();
+            if(userInput <= 0 || userInput > 2){
+                throw new IllegalArgumentException("[ERRO] Indice invalido!");
+            }
             if(userInput == 1){
                 ControleEstoque.consultarEstoque("data/carros.txt", "data/m_carros.txt");
             }
@@ -104,9 +139,16 @@ public class Screen {
             sc.nextLine();
 
         }
+
+        catch(IllegalArgumentException e){
+            System.out.println(e.getMessage());
+        }
+
         catch(Exception e){
             e.printStackTrace();
         }
+
+    
     }
 
     public static void menuRemoveVeiculo(){
@@ -115,8 +157,12 @@ public class Screen {
             System.out.print("[1]Carro\n[2]Moto\n>>");
             int userInput = sc.nextInt();
             sc.nextLine();
+            if(userInput <= 0 || userInput > 2){
+                throw new IllegalArgumentException("[ERRO] Indice invalido!");
+            }
             String nomeArquivo = userInput == 1 ? "data/carros.txt" : "data/motos.txt";
             String arquivoModelo = userInput == 1 ? "data/m_carros.txt" : "data/m_motos.txt";
+
             ControleEstoque.consultarEstoque(nomeArquivo, arquivoModelo);
             System.out.print("\nDigite o indice: ");
             int userIndex = sc.nextInt();
@@ -125,12 +171,19 @@ public class Screen {
             limparTela();
             ControleEstoque.removerVeiculo(userIndex, nomeArquivo, arquivoModelo);
             
-            
             esperar(2500);
             
         }
+        catch(IllegalArgumentException e){
+            System.out.println(e.getMessage());
+        }
+
         catch(Exception e){
             e.printStackTrace();
+        }
+
+        finally{
+            esperar(2500);
         }
     }
 
