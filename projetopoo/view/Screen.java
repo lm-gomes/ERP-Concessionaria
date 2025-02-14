@@ -324,7 +324,7 @@ public class Screen {
                         menuRemoverCliente();
                         break;
                     case 5:
-                        ControleClientes.exibirClientes();
+                        menuExibirClientes();
                         break;
                     default: 
                         System.out.println("Opção inválida.");
@@ -405,7 +405,7 @@ public class Screen {
                     menuRemoverCliente();
                     break;
                 case 5:
-                    ControleClientes.exibirClientes();
+                    menuExibirClientes();
                     break;
                 case 6:
                     isRunning = false;
@@ -584,6 +584,17 @@ public class Screen {
         finally{
             esperar(2500);
         }
+    }
+
+    public static void menuExibirClientes(){
+        try {
+            ControleClientes.exibirClientes();
+            System.out.println("\n\nPressione [ENTER] para continuar.");
+            sc.nextLine();
+        }catch (Exception e) {
+            e.printStackTrace();
+        }
+
     }
 
     public static void menuRemoverCliente(){

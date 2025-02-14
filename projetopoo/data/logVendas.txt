@@ -53,3 +53,5 @@ Nome: rato assado Cpf: 1234567 | CARRO: Marca: jadi Modelo: malaca Ano: 1  Preco
 [LOG-SISTEMA] CLIENTE: xuxa CPF: 5436 (14/02/2025 15:06:23)
 [LOG-SISTEMA] CLIENTE: uiiii CPF: 6666 (14/02/2025 15:06:50)
 [LOG-SISTEMA] CLIENTE: iuuuuuu CPF: 3333 | VEICULO: xisjosta (14/02/2025 15:07:03)
+[LOG-SISTEMA] CLIENTE: juvenildo CPF: 666 (14/02/2025 15:49:27)
+[LOG-SISTEMA] CLIENTE: juvenildo CPF: 666 | VEICULO: flpolos (14/02/2025 15:51:18)

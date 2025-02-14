@@ -45,3 +45,8 @@
 [LOG-SISTEMA]Veiculo removido: Modelo - zebrinha 14/02/2025 10:12:55
 [LOG-SISTEMA]Veiculo removido: Modelo - xisjostinha 14/02/2025 10:13:13
 [LOG-SISTEMA]Veiculo removido: Modelo - xisjosta 14/02/2025 15:07:03
+[LOG-SISTEMA]Veiculo cadastrado: Carro - Modelo: bmw 14/02/2025 15:43:27
+[LOG-SISTEMA]Veiculo removido: Modelo - bmw 14/02/2025 15:45:56
+[LOG-SISTEMA]Veiculo cadastrado: Moto - Modelo: xinerai 14/02/2025 15:47:33
+[LOG-SISTEMA]Veiculo removido: Modelo - xinerai 14/02/2025 15:49:01
+[LOG-SISTEMA]Veiculo removido: Modelo - flpolos 14/02/2025 15:51:18

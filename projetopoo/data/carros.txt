@@ -1,5 +1,3 @@
 Marca: Renault Modelo: Brabo Ano: 1  Preco: 1.0 Cor:red KM: 0.0
 Marca: JoaoGomes Modelo: Ursula Ano: 1  Preco: 1.0 Cor:red KM: 0.0
 Marca: alou Modelo: 123 Ano: 1  Preco: 1.0 Cor:red KM: 0.0
-Marca: felpito Modelo: flpolos Ano: 2020  Preco: 2099.0 Cor:azul KM: 0.0
-Marca: felpito Modelo: flpolos Ano: 2020  Preco: 2099.0 Cor:azul KM: 0.0
