@@ -1,0 +1,18 @@
+CLIENTE: raimundo CPF: 1234
+CLIENTE: Jadiel CPF: 0778
+CLIENTE: xuxa CPF: 5436
+CLIENTE: arnaldinho CPF: 7652
+CLIENTE: phelps brasilia CPF: 1042
+CLIENTE: gosto de bosta CPF: 44455
+CLIENTE: biloto da rodoviaria CPF: 111232
+CLIENTE: cururu CPF: 3456
+CLIENTE: ioioioio CPF: 55976
+CLIENTE: lucas CPF: 1234567
+CLIENTE: rato assado CPF: 1234567
+CLIENTE: marciano CPF: 43
+CLIENTE: iuuuuuu CPF: 3333
+CLIENTE: uiiii CPF: 6666
+CLIENTE: cururu branco CPF: 23490
+CLIENTE: obilson CPF: 9474215308
+CLIENTE: sapateiro CPF: 4545
+CLIENTE: obede CPF: 99999999999

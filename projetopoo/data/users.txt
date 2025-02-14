@@ -1,0 +1,4 @@
+Tipo: E Login: mariazona  Senha: 1323
+Tipo: G Login: marina  Senha: 1211
+Tipo: E Login: mariajulia  Senha: 2609
+Tipo: E Login: jadiel  Senha: 2343
