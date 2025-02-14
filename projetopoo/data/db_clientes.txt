@@ -13,6 +13,6 @@ CLIENTE: marciano CPF: 43
 CLIENTE: iuuuuuu CPF: 3333
 CLIENTE: uiiii CPF: 6666
 CLIENTE: cururu branco CPF: 23490
-CLIENTE: juvenildo CPF: 666
+CLIENTE: obilson CPF: 9474215308
 CLIENTE: sapateiro CPF: 4545
 CLIENTE: obede CPF: 99999999999

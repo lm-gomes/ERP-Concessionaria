@@ -13,5 +13,5 @@ CLIENTE: marciano CPF: 43 ENDERECO: vicosa CONTATO: 77
 CLIENTE: iuuuuuu CPF: 3333 ENDERECO: caza grazadeus CONTATO: 45655
 CLIENTE: uiiii CPF: 6666 ENDERECO: rua joaninha perdigao CONTATO: 45546
 CLIENTE: cururu branco CPF: 23490 ENDERECO: dobra ali na rua sem saida CONTATO: 9757
-CLIENTE: juvenildo CPF: 666 ENDERECO: so recebendo pix CONTATO: 43535
+CLIENTE: obilson CPF: 9474215308 ENDERECO: ruinhazinhaaaaaaa CONTATO: 88996164308
 CLIENTE: sapateiro CPF: 4545 ENDERECO: ibiapina CONTATO: 8080
