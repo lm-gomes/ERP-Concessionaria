@@ -168,6 +168,7 @@ public class ControleUsuarios {
 
     public static void tipoUser(String login){
         try(BufferedReader br = new BufferedReader(new FileReader("data/users.txt"))){
+            login = login.toLowerCase();
             List <String> listaUsuarios = new ArrayList<>();
             
 

@@ -298,7 +298,7 @@ public class Screen {
         while(isRunning){
             limparTela();
             printMenu(1);
-            System.out.print("O que deseja fazer:\n [1] Cadastrar novo veiculo.\n [2] Remover veíuculo.\n [3] Consultar veículos.\n [4] Acessar registros\n>> ");
+            System.out.print("O que deseja fazer:\n [1] Cadastrar novo veiculo.\n [2] Remover veíuculo.\n [3] Consultar veículos.\n [4] Acessar registros\n [5] Sair\n>> ");
             int userOp = sc.nextInt();
             sc.nextLine();
             limparTela();
@@ -316,6 +316,10 @@ public class Screen {
                     ControleEstoque.consultarLog();
                     System.out.println("\n(!) Pressione [ENTER] para continuar\n");
                     sc.nextLine();
+                case 5:
+                    isRunning = false;
+                    System.out.println("Programa encerrado.");
+                    break;
                 default:
                     System.out.println("Opção inválida.");
                     break;
@@ -365,23 +369,37 @@ public class Screen {
     public static void menuVendas(){
         try{
             ControleClientes.exibirClientes();
+            int totalClientes = ControleClientes.contarLinhasArquivos("data/clientes.txt");
 
             System.out.print("Indice do cliente que fara a compra\n>>");
             int id = sc.nextInt();
             sc.nextLine();
-            
+            if(id <= 0 || id > totalClientes){
+                throw new IllegalArgumentException("[ERRO] Indice invalido!");
+
+            }
             limparTela();
+
             System.out.print("[1]Carro\n[2]Moto\n>>");
             int userInput = sc.nextInt();
             sc.nextLine();
+            if(userInput <= 0 || userInput > 2){
+                throw new IllegalArgumentException("[ERRO] Indice invalido!");
 
+            }
             limparTela();
+
             if(userInput == 1){
                 ControleVendas.exibirVeiculo("data/carros.txt");
+                int totalCarros = ControleClientes.contarLinhasArquivos("data/carros.txt");
 
                 System.out.print("Digite o indice do carro para a venda\n>>");
                 int indice = sc.nextInt();
                 sc.nextLine();
+                if(indice <= 0 || indice > totalCarros)
+                {
+                    throw new IllegalArgumentException("[ERRO] Indice invalido!");
+                }
 
                 ControleVendas.relatorioDeVendas(id, indice, "data/carros.txt", "data/m_carros.txt");
 
@@ -389,13 +407,18 @@ public class Screen {
 
                 limparTela();
                 System.out.println("- - Carro vendido com sucesso! - -");
-                esperar(2500);
             }
             else{
                 ControleVendas.exibirVeiculo("data/motos.txt");
+                int totalMotos = ControleClientes.contarLinhasArquivos("data/carros.txt");
+
                 System.out.print("Digite o indice da moto para a venda\n>>");
                 int indice = sc.nextInt();
                 sc.nextLine();
+                if(indice <= 0 || indice > totalMotos)
+                {
+                    throw new IllegalArgumentException("[ERRO] Indice invalido!");
+                }
 
                 ControleVendas.relatorioDeVendas(id, indice, "data/motos.txt", "data/m_motos.txt");
 
@@ -403,12 +426,18 @@ public class Screen {
 
                 limparTela();
                 System.out.println("- - Moto vendida com sucesso! - - ");
-                esperar(2500);
             }
         }
-        catch(Exception e){
-            e.printStackTrace();
+        catch(IllegalArgumentException e){
+            System.out.println(e.getMessage());
         }
+        catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+        finally{
+            esperar(2500);
+        }
+
 
     }
 
@@ -420,6 +449,9 @@ public class Screen {
             System.out.println("CPF: ");
             int clienteCpf = sc.nextInt();
             sc.nextLine();
+            if(clienteCpf <= 0){
+                throw new IllegalArgumentException("[ERRO] CPF invalido!!");
+            }
 
             System.out.println("ENDERECO: ");
             String clienteEndereco = sc.nextLine();
@@ -427,28 +459,43 @@ public class Screen {
             System.out.println("CONTATO: ");
             int clienteContato = sc.nextInt();
             sc.nextLine();
+            if(clienteContato <= 0){
+                throw new IllegalArgumentException("[ERRO] contato invalido!!");
+            }
 
             Cliente cliente = new Cliente(clienteNome, clienteCpf, clienteEndereco, clienteContato);
             ControleClientes.cadastrarClientes(cliente);
 
             limparTela();
             System.out.println("Cliente cadastrado com sucesso!");
-            esperar(2500);
+        }
+        catch(IllegalArgumentException e){
+            System.out.println(e.getMessage());
         }
         catch(Exception e){
             e.printStackTrace();
+        }
+        finally{
+            esperar(2500);
         }
     }
 
     public static void menuAlterarDadosCliente(){
         try{
             ControleClientes.exibirClientes();
+            int totalClientes = ControleClientes.contarLinhasArquivos("data/clientes.txt");
 
             System.out.print("Digite o indice do cliente para trocar suas informacoes\n>>");
             int index = sc.nextInt();
             sc.nextLine();
+            esperar(1500);
+            limparTela();
+            if(index <= 0 || index > totalClientes){
+                throw new IllegalArgumentException("[ERRO] Indice invalido!");
 
-            System.out.println("Nao e recomendado alterar nome e cpf");
+            }
+
+            System.out.println("\t*NAO E RECOMENDADO ALTERAR NOME OU CPF*\n");
 
             System.out.print("Digite o nome do cliente\n>>");
             String nome = sc.nextLine();
@@ -456,6 +503,9 @@ public class Screen {
             System.out.print("Digite o cpf do cliente\n>>");
             int cpf = sc.nextInt();
             sc.nextLine();
+            if(cpf <= 0){
+                throw new IllegalArgumentException("[ERRO] CPF invalido!!");
+            }
 
             System.out.print("Digite o novo endereco\n>>");
             String end = sc.nextLine();
@@ -463,34 +513,52 @@ public class Screen {
             System.out.print("Digite o novo numero de telefone\n>>");
             int tel = sc.nextInt();
             sc.nextLine();
+            if(tel <= 0){
+                throw new IllegalArgumentException("[ERRO] contato invalido!!");
+            }
 
             ControleClientes.alterarDadosCliente(index, nome, cpf, end, tel);
 
             limparTela();
             System.out.println("Informacoes atualizadas com sucesso!");
-            esperar(2500);
+        }
+        catch(IllegalArgumentException e){
+            System.out.println(e.getMessage());
         }
         catch(Exception e){
-
+            e.printStackTrace();
+        }
+        finally{
+            esperar(2500);
         }
     }
 
     public static void menuRemoverCliente(){
         try{
             ControleClientes.exibirClientes();
+            int totalClientes = ControleClientes.contarLinhasArquivos("data/clientes.txt");
 
             System.out.print("Digite o indice do cliente a remover\n>>");
             int index = sc.nextInt();
             sc.nextLine();
+            if(index <= 0 || index > totalClientes){
+                throw new IllegalArgumentException("[ERRO] Indice invalido!");
+
+            }
 
             ControleClientes.removerCliente(index);
 
             limparTela();
             System.out.println("- - Cliente removido com sucesso! - -");
-            esperar(2500);
+        }
+        catch(IllegalArgumentException e){
+            System.out.println(e.getMessage());
         }
         catch(Exception e){
             e.printStackTrace();
+        }
+        finally{
+            esperar(2500);
         }
     }
 

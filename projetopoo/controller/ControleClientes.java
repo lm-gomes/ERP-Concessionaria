@@ -40,12 +40,12 @@ public class ControleClientes{
         String dados = "CLIENTE: " + nome + " CPF: " + cpf + " ENDERECO: " + end + " CONTATO: " + num;
         String db_dados = "CLIENTE: " + nome + " CPF: " + cpf;
 
-        List<String> linhas = new ArrayList<>();
+        List<String> linhasArquivo = new ArrayList<>();
 
         try(BufferedReader br = new BufferedReader(new FileReader("data/clientes.txt"))){
             String linha;
             while((linha=br.readLine())!=null){
-                linhas.add(linha);
+                linhasArquivo.add(linha);
             }
         }
         catch(Exception e){
@@ -54,7 +54,7 @@ public class ControleClientes{
 
         try(BufferedWriter bw = new BufferedWriter(new FileWriter("data/clientes.txt"))){
             int i=1;
-            for(String linha : linhas){
+            for(String linha : linhasArquivo){
                 if(i != index){
                     bw.write(linha);
                     bw.newLine();
@@ -70,12 +70,12 @@ public class ControleClientes{
             e.printStackTrace();
         }
 
-        List<String> lin = new ArrayList<>();
+        List<String> linhasArquivo2 = new ArrayList<>();
 
         try(BufferedReader br = new BufferedReader(new FileReader("data/db_clientes.txt"))){
             String linha;
             while((linha=br.readLine())!=null){
-                lin.add(linha);
+                linhasArquivo2.add(linha);
             }
         }
         catch(Exception e){
@@ -84,7 +84,7 @@ public class ControleClientes{
 
         try(BufferedWriter bw = new BufferedWriter(new FileWriter("data/db_clientes.txt"))){
             int i=1;
-            for(String linha : lin){
+            for(String linha : linhasArquivo2){
                 if(i != index){
                     bw.write(linha);
                     bw.newLine();
@@ -132,28 +132,40 @@ public class ControleClientes{
         List<String> lin = new ArrayList<>();
 
         try(BufferedReader br = new BufferedReader(new FileReader("data/db_clientes.txt"))){
-        String linha;
-        while((linha=br.readLine())!=null){
-            lin.add(linha);
+            String linha;
+            while((linha=br.readLine())!=null){
+                lin.add(linha);
+            }
         }
-    }
-    catch(Exception e){
-        e.printStackTrace();
+        catch(Exception e){
+            e.printStackTrace();
+        }
+
+        try(BufferedWriter bw = new BufferedWriter(new FileWriter("data/db_clientes.txt"))){
+            int i=1;
+            for(String linha : lin){
+                if(i != index){
+                    bw.write(linha);
+                    bw.newLine();
+                }
+                i++;
+            }
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
     }
 
-    try(BufferedWriter bw = new BufferedWriter(new FileWriter("data/db_clientes.txt"))){
-        int i=1;
-        for(String linha : lin){
-            if(i != index){
-                bw.write(linha);
-                bw.newLine();
+    public static int contarLinhasArquivos(String arquivo){
+        int i=0;
+        try(BufferedReader br = new BufferedReader(new FileReader(arquivo))){
+            while(br.readLine()!=null){
+                i++;
             }
-            i++;
         }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+        return i;
     }
-    catch(Exception e){
-        e.printStackTrace();
-    }
-    }
-    
 }

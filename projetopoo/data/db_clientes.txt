@@ -12,6 +12,6 @@ CLIENTE: rato assado CPF: 1234567
 CLIENTE: marciano CPF: 43
 CLIENTE: iuuuuuu CPF: 3333
 CLIENTE: uiiii CPF: 6666
-CLIENTE: cururu preto CPF: 1234
+CLIENTE: cururu branco CPF: 23490
 CLIENTE: juvenildo CPF: 666
 CLIENTE: sapateiro CPF: 4545
