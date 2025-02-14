@@ -36,7 +36,7 @@ public class ControleClientes{
         }
     }
 
-    public static void alterarDadosCliente(int index, String nome, int cpf, String end, int num){
+    public static void alterarDadosCliente(int index, String nome, long cpf, String end, long num){
         String dados = "CLIENTE: " + nome + " CPF: " + cpf + " ENDERECO: " + end + " CONTATO: " + num;
         String db_dados = "CLIENTE: " + nome + " CPF: " + cpf;
 

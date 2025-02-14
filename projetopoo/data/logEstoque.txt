@@ -46,3 +46,5 @@
 [LOG-SISTEMA]Veiculo removido: Modelo - xisjostinha 14/02/2025 10:13:13
 [LOG-SISTEMA]Veiculo removido: Modelo - zebrinha 14/02/2025 15:07:24
 [LOG-SISTEMA]Veiculo removido: Modelo - aesthetic 14/02/2025 15:09:50
+[LOG-SISTEMA]Veiculo cadastrado: Carro - Modelo: corolla 14/02/2025 15:55:20
+[LOG-SISTEMA]Veiculo removido: Modelo - corolla 14/02/2025 15:56:25

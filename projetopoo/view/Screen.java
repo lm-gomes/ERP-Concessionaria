@@ -471,14 +471,14 @@ public class Screen {
             String clienteNome = sc.nextLine();
 
             System.out.println("CPF: ");
-            int clienteCpf = sc.nextInt();
+            long clienteCpf = sc.nextLong();
             sc.nextLine();
 
             System.out.println("ENDERECO: ");
             String clienteEndereco = sc.nextLine();
 
             System.out.println("CONTATO: ");
-            int clienteContato = sc.nextInt();
+            long clienteContato = sc.nextLong();
             sc.nextLine();
 
             Cliente cliente = new Cliente(clienteNome, clienteCpf, clienteEndereco, clienteContato);
@@ -507,14 +507,14 @@ public class Screen {
             String nome = sc.nextLine();
 
             System.out.print("Digite o cpf do cliente\n>>");
-            int cpf = sc.nextInt();
+            long cpf = sc.nextLong();
             sc.nextLine();
 
             System.out.print("Digite o novo endereco\n>>");
             String end = sc.nextLine();
 
             System.out.print("Digite o novo numero de telefone\n>>");
-            int tel = sc.nextInt();
+            long tel = sc.nextLong();
             sc.nextLine();
 
             ControleClientes.alterarDadosCliente(index, nome, cpf, end, tel);

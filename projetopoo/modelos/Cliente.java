@@ -2,21 +2,21 @@ package modelos;
 
 public class Cliente {
     private String nome;
-    private int cpf;  
+    private long cpf;  
     protected String endereco;
-    protected int contato;
+    protected long contato;
 
-    public Cliente(String nome, int cpf, String endereco, int contato){
+    public Cliente(String nome, long cpf, String endereco, long contato){
         this.nome = nome;
         this.cpf = cpf;
         this.endereco = endereco;
         this.contato = contato;
     }
 
-    public void setCpf(int cpf){
+    public void setCpf(long cpf){
         this.cpf = cpf;
     }
-    public int getCpf(){
+    public long getCpf(){
         return cpf;
     }
 
@@ -37,7 +37,7 @@ public class Cliente {
     public void setContato(int contato){
         this.contato = contato;
     }
-    public int getContato(){
+    public long getContato(){
         return contato;
     }
 }

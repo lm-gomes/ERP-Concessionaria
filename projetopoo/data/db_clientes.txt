@@ -15,3 +15,4 @@ CLIENTE: uiiii CPF: 6666
 CLIENTE: cururu preto CPF: 1234
 CLIENTE: juvenildo CPF: 666
 CLIENTE: sapateiro CPF: 4545
+CLIENTE: obede CPF: 99999999999
