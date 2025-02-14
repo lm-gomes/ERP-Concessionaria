@@ -95,10 +95,10 @@ public class Screen {
             int userInput = sc.nextInt();
             sc.nextLine();
             if(userInput == 1){
-                ControleEstoque.consultarEstoque("data/carros.txt");
+                ControleEstoque.consultarEstoque("data/carros.txt", "data/m_carros.txt");
             }
             else{
-                ControleEstoque.consultarEstoque("data/motos.txt");
+                ControleEstoque.consultarEstoque("data/motos.txt", "data/m_motos.txt");
             }
             System.out.println("\n\nPressione [ENTER] para continuar.");
             sc.nextLine();
@@ -117,7 +117,7 @@ public class Screen {
             sc.nextLine();
             String nomeArquivo = userInput == 1 ? "data/carros.txt" : "data/motos.txt";
             String arquivoModelo = userInput == 1 ? "data/m_carros.txt" : "data/m_motos.txt";
-
+            ControleEstoque.consultarEstoque(nomeArquivo, arquivoModelo);
             System.out.print("\nDigite o indice: ");
             int userIndex = sc.nextInt();
             sc.nextLine();
@@ -280,8 +280,8 @@ public class Screen {
                 break;
 
                 case 4:
-                    System.out.println("Saindo...\n");
                     isRunning = false;
+                    System.out.println("\nPrograma encerrado.");
                     break;
                 default:
                 System.out.println("Opção inválida.");
@@ -292,49 +292,72 @@ public class Screen {
     }
 
     public static void menuEstoquista(String login){
-        printMenu(1);
-        System.out.print("O que deseja fazer:\n [1] Cadastrar novo veiculo.\n [2] Remover veiculo.\n>> ");
-        int userOp = sc.nextInt();
+        System.out.println("Pressione [ENTER] para entrar no sistema.");
         sc.nextLine();
-        limparTela();
-        switch (userOp) {
-            case 1:
-                menuCadastroVeiculo();
-                break;
-            case 2:
-                menuRemoveVeiculo();
-                break;
+        boolean isRunning = true;
+        while(isRunning){
+            limparTela();
+            printMenu(1);
+            System.out.print("O que deseja fazer:\n [1] Cadastrar novo veiculo.\n [2] Remover veíuculo.\n [3] Consultar veículos.\n [4] Acessar registros\n>> ");
+            int userOp = sc.nextInt();
+            sc.nextLine();
+            limparTela();
+            switch (userOp) {
+                case 1:
+                    menuCadastroVeiculo();
+                    break;
+                case 2:
+                    menuRemoveVeiculo();
+                    break;
+                case 3:
+                    menuConsultaVeiculo();
+                    break;
+                case 4:
+                    ControleEstoque.consultarLog();
+                    System.out.println("\n(!) Pressione [ENTER] para continuar\n");
+                    sc.nextLine();
                 default:
-                System.out.println("Opção inválida.");
-                break;
+                    System.out.println("Opção inválida.");
+                    break;
+            }
         }
     }
 
     public static void menuVendedor(String login){
-        printMenu(1);
-        System.out.print("O que deseja fazer:\n [1] Vender veículo\n [2] Cadastrar cliente.\n [3] Alterar dados do cliente.\n [4] Remover cliente. \n [5] Exibir clientes.\n>> ");
-        int userOp = sc.nextInt();
+        System.out.println("Pressione [ENTER] para entrar no sistema.");
         sc.nextLine();
-        
-        switch (userOp) {
-            case 1:
-                        menuVendas();
-                        break;
-                    case 2:
-                        menuCadastrarCliente();
-                        break;
-                    case 3:
-                        menuAlterarDadosCliente();
-                        break;
-                    case 4:
-                        menuRemoverCliente();
-                        break;
-                    case 5:
-                        ControleClientes.exibirClientes();
-                        break;
-                    default: 
-                        System.out.println("Opção inválida.");
-                        break;
+        boolean isRunning = true;
+        while(isRunning){
+            limparTela();
+            printMenu(1);
+            System.out.print("O que deseja fazer:\n [1] Vender veículo\n [2] Cadastrar cliente.\n [3] Alterar dados do cliente.\n [4] Remover cliente. \n [5] Exibir clientes.\n[6]Sair\n>> ");
+            int userOp = sc.nextInt();
+            sc.nextLine();
+            
+            switch (userOp) {
+                case 1:
+                    menuVendas();
+                    break;
+                case 2:
+                    menuCadastrarCliente();
+                    break;
+                case 3:
+                    menuAlterarDadosCliente();
+                    break;
+                case 4:
+                    menuRemoverCliente();
+                    break;
+                case 5:
+                    ControleClientes.exibirClientes();
+                    break;
+                case 6:
+                    isRunning = false;
+                    System.out.println("\nPrograma encerrado");
+                    break;
+                default: 
+                    System.out.println("Opção inválida.");
+                    break;
+            }
         }
         
     }

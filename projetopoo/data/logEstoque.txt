@@ -33,3 +33,14 @@
 [LOG-SISTEMA]Veiculo removido: Modelo - 4 13/02/2025 21:17:58
 [LOG-SISTEMA]Veiculo removido: Modelo - arnaldinho 13/02/2025 21:19:45
 [LOG-SISTEMA]Veiculo removido: Modelo - maestro 13/02/2025 21:20:41
+[LOG-SISTEMA]Veiculo cadastrado: Carro - Modelo: flpolos 14/02/2025 09:50:04
+[LOG-SISTEMA]Veiculo cadastrado: Carro - Modelo: Felpolos 14/02/2025 09:51:01
+[LOG-SISTEMA]Veiculo cadastrado: Moto - Modelo: aesthetic 14/02/2025 09:53:52
+[LOG-SISTEMA]Veiculo cadastrado: Carro - Modelo: zebrinha 14/02/2025 09:56:45
+[LOG-SISTEMA]Veiculo cadastrado: Moto - Modelo: hognight 14/02/2025 09:57:12
+[LOG-SISTEMA]Veiculo removido: Modelo -  14/02/2025 10:06:44
+[LOG-SISTEMA]Veiculo removido: Modelo - zebrinha 14/02/2025 10:07:00
+[LOG-SISTEMA]Veiculo removido: Modelo - zebrinha 14/02/2025 10:08:11
+[LOG-SISTEMA]Veiculo removido: Modelo - flpolos 14/02/2025 10:12:31
+[LOG-SISTEMA]Veiculo removido: Modelo - zebrinha 14/02/2025 10:12:55
+[LOG-SISTEMA]Veiculo removido: Modelo - xisjostinha 14/02/2025 10:13:13

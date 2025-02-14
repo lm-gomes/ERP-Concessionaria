@@ -18,9 +18,6 @@ public class ControleEstoque{
                 listaDeModelos.add(br.readLine());
             }
             Collections.sort(listaDeModelos);
-            /*for(String modelo : listaDeModelos){
-                System.out.println(modelo);
-            }*/
             
         }
         catch(FileNotFoundException e){
@@ -43,35 +40,26 @@ public class ControleEstoque{
     }
 
     public static void verificarEstoque(String nomeArquivo){
+        ordernarModelo(nomeArquivo);
         try(BufferedReader br = new BufferedReader(new FileReader(nomeArquivo))){
 
-            //nao fui eu q fiz isso
-            
-
-
-            /*for(int i = 0; br.ready(); i++){
-                String s = br.readLine();
-                int cont = 0;
-                for(j = i; br.ready() && br.readLine().equals(s); j++){
+            String s = br.readLine();
+    
+            while (br.ready()) {
+                int cont = 1; 
+                
+                String proxLinha = "";
+                while (br.ready() && (proxLinha = br.readLine()).equals(s)) {
                     cont++;
                 }
-                    if(cont < 5){
-                        System.out.println("Alerta!" + s);
-                    }
-                    i = j;
-            }*/
-            while(br.ready()){
-                String s = br.readLine();
-                int cont = 1;
-                while(br.ready() && br.readLine().equals(s)){
-                    cont++;
+    
+                if (cont < 5) {
+                    System.out.println(s + " em falta! (" + cont + " unidades)");
                 }
-                br.reset();
-                if(cont<5){
-                    System.out.println("Alerta!" + s);
-                }
+                
+                s = proxLinha;
             }
-            
+                
         }
         catch(Exception e){
             System.out.println(e.getMessage());
@@ -83,7 +71,7 @@ public class ControleEstoque{
         try (BufferedWriter bw = new BufferedWriter(new FileWriter("data/carros.txt", true)); BufferedWriter bwm = new BufferedWriter(new FileWriter("data/m_carros.txt", true))) {
 
             for(int i = 0; i < car.quantidade; i++){
-                bw.write("Marca: " + car.marca + " Modelo: " + car.modelo + " Ano: " + car.ano + "  Preco: " + car.preco + " Cor:" + car.cor + " KM: " + car.km);
+                bw.write("Marca: " + car.marca + " Modelo: " + car.modelo.toLowerCase() + " Ano: " + car.ano + "  Preco: " + car.preco + " Cor:" + car.cor + " KM: " + car.km);
                 bw.newLine();
                 bwm.write(car.modelo);
                 bwm.newLine();
@@ -101,7 +89,7 @@ public class ControleEstoque{
     public static void cadastrarVeiculo(Moto moto){
         try (BufferedWriter bw = new BufferedWriter(new FileWriter("data/motos.txt", true)); BufferedWriter bwm = new BufferedWriter(new FileWriter("data/m_motos.txt", true))) {
             for(int i = 0; i < moto.quantidade; i++){
-                bw.write("Marca: " + moto.marca + " Modelo: " + moto.modelo + " Ano: " + moto.ano + " Preco: " + moto.preco + " Cor:" + moto.cor + " KM: " + moto.km);
+                bw.write("Marca: " + moto.marca + " Modelo: " + moto.modelo.toLowerCase() + " Ano: " + moto.ano + " Preco: " + moto.preco + " Cor:" + moto.cor + " KM: " + moto.km);
                 bw.newLine();
                 bwm.write(moto.modelo);
                 bwm.newLine();
@@ -116,9 +104,10 @@ public class ControleEstoque{
 
 
 
-    public static void consultarEstoque(String nomeArquivo){
-        System.out.println("---------------------------------------------");
-        verificarEstoque("data/m_carros.txt");
+    public static void consultarEstoque(String nomeArquivo, String modeloArquivo){
+        System.out.println("-------------------[!]ALERTA[!]--------------------------");
+        verificarEstoque(modeloArquivo);
+        System.out.println("---------------------------------------------------------");
 
         try(BufferedReader br = new BufferedReader(new FileReader(nomeArquivo));){
             int i = 1;
