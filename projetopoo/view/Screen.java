@@ -504,7 +504,7 @@ public class Screen {
             String clienteNome = sc.nextLine();
 
             System.out.println("CPF: ");
-            int clienteCpf = sc.nextInt();
+            long clienteCpf = sc.nextLong();
             sc.nextLine();
             if(clienteCpf <= 0){
                 throw new IllegalArgumentException("[ERRO] CPF invalido!!");
@@ -514,7 +514,7 @@ public class Screen {
             String clienteEndereco = sc.nextLine();
 
             System.out.println("CONTATO: ");
-            int clienteContato = sc.nextInt();
+            long clienteContato = sc.nextLong();
             sc.nextLine();
             if(clienteContato <= 0){
                 throw new IllegalArgumentException("[ERRO] contato invalido!!");
@@ -558,7 +558,7 @@ public class Screen {
             String nome = sc.nextLine();
 
             System.out.print("Digite o cpf do cliente\n>>");
-            int cpf = sc.nextInt();
+            long cpf = sc.nextLong();
             sc.nextLine();
             if(cpf <= 0){
                 throw new IllegalArgumentException("[ERRO] CPF invalido!!");
@@ -568,7 +568,7 @@ public class Screen {
             String end = sc.nextLine();
 
             System.out.print("Digite o novo numero de telefone\n>>");
-            int tel = sc.nextInt();
+            long tel = sc.nextLong();
             sc.nextLine();
             if(tel <= 0){
                 throw new IllegalArgumentException("[ERRO] contato invalido!!");
