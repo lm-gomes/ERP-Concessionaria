@@ -1,3 +1,1 @@
-Marca: Renault Modelo: Brabo Ano: 1  Preco: 1.0 Cor:red KM: 0.0
-Marca: JoaoGomes Modelo: Ursula Ano: 1  Preco: 1.0 Cor:red KM: 0.0
-Marca: alou Modelo: 123 Ano: 1  Preco: 1.0 Cor:red KM: 0.0
+
