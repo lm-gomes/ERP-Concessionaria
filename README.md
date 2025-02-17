@@ -1,1 +1,3 @@
-OOP Project
+Este é um sistema ERP para uma concessionária que busca facilitar e tornar ágeis operações de estoque e venda. Através do programa, o usuário será capaz de cadastrar, consultar, modificar e remover novos usuários, veículos e clientes, de acordo com as permissões concedidas. Além disso, também é possível ter acesso aos LOGS das operações realizadas e alertas automáticos de quantidade de estoque. A interface do programa é pelo terminal e toda a manipulação dos dados é feita através de arquivos .txt, o que torna a aplicação leve e de fácil portabilidade. 
+
+Foi utilizado o modelo MVC (Model-View-Controller) para a organização do código-fonte, tornando-o mais gerenciável e consequentemente trazendo eficiência ao desenvolvimento. Este projeto foi apresentado para a disciplina de Programação Orientada a Objetos, disciplina essa que busca dar compreensão à conceitos importantes como herança, polimorfismo, encapsulamento, etc.

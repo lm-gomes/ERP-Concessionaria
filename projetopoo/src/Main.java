@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 package src;
 
 //import modelos.Carro;
@@ -28,18 +27,4 @@ public class Main{
         Screen.menuPrincipal();
         
     }
-=======
-package src;
-
-import modelos.Carro;
-import modelos.Moto;
-import view.Screen;
-import java.util.Scanner;
-
-public class Main{
-    public static void main(String[] args){
-        Screen.menuPrincipal();
-        
-    }
->>>>>>> parent of 36eb50d (delete Main)
 }
